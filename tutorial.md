@@ -1,8 +1,8 @@
 # Git tutorial
 
-The tutorial is desigined to give practical experience with Git.
+The tutorial is designed to give practical experience with Git.
 The only assumption we put is that you have a GitHub account.
-Most of the things can be done in the browser, so we do not strictly require to have Git installed on your computer.
+Most of the functionality can be accessed via the browser, so it is not necessary to have Git installed on your computer for basic usage.
 At the same time we will provide instructions on how to do the same thing using command line interface.
 
 ## No code
