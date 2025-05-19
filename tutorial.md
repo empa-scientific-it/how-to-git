@@ -18,12 +18,12 @@ The repository will serve as a place to store our text file.
 To create a repository, please go to your GitHub account, select the "Repositories" tab and click on the green "New" button.
 Alternatively, you can click on [this link](https://github.com/new).
 In the newly opened page, please fill in the following fields:
-- **Repository name**: `git-tutorial`
-- (optional) **Description**: `Git tutorial`
-- **Public**: (leave it as is)
-- **Initialize this repository with a README**: (leave it unchecked)
-- **Add .gitignore**: None (default)
-- **Choose a license**: None (default)
+- **Repository name**: `git-tutorial`.
+- (optional) **Description**: `Git tutorial`.
+- **Public**: (leave it as is).
+- **Initialize this repository with a README**: (leave it unchecked).
+- **Add .gitignore**: None (default).
+- **Choose a license**: None (default).
 
 After that, please click on the green "Create repository" button.
 
@@ -33,7 +33,7 @@ The repository is empty, so we need to add a file to it.
 
 ## Add a file to the repository
 To add a file to the repository, please click on the "uploading an existing file" link.
-In the newly opened page, please drag and drop a txt file to the drag and drop area.
+In the newly opened page, please drag and drop a text file to the drag and drop area.
 You can create the file on your computer using any available text editor.
 The file can contain any text you want, but usually the programmers like to put "Hello, World!", so let's follow the tradition.
 The filename does not matter.
