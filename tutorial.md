@@ -1,17 +1,15 @@
 # Git tutorial
 
 The tutorial is designed to give practical experience with Git.
-The only assumption we put is that you have a GitHub account.
+Various interfaces rely on it. 
+In this tutorial, Git functionality is explained using GitHub, but there are other web interfaces, including [GitLab](https://about.gitlab.com/) and [Bitbucket](https://bitbucket.org/product/).
 Most of the functionality can be accessed via the browser, so it is not necessary to have Git installed on your computer for basic usage.
-At the same time we will provide instructions on how to do the same thing using command line interface.
+We will provide instructions on how to use the browser interface alongside the command line interface.
 
-## No code
+## No code knowledge is required to start
 
-From our experience and experience of the others, no code is too simple to be used in the tutorial.
-Any programming language we could pick will would derail the attention from the Git's essentials.
-In the end, any code is just a text.
-Therefore, we will focus on editing a text file.
-
+Based on experience, it is simpler not to start with coding examples when learning about Git.
+Instead, we will use a text file, since code is ultimately just text.
 
 ## Create a repository
 
