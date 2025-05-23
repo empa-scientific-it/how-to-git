@@ -10,4 +10,5 @@ It's an interactive tutorial designed to teach the fundamentals of Git and GitHu
 This hands-on session covers essential of Git (e.g., initializing repositories, branching, merging, resolving conflicts) and working with remote repositories on GitHub (managing remotes, Pull Requests, reviews, automation).
 
 ## Links
-- [JupyterLab extension for Git](https://github.com/jupyterlab/jupyterlab-git)
+- [Pro Git](https://git-scm.com/book/en/v2) – free book, highly recommended read
+- [Oh Shit, Git?!](https://ohshitgit.com) – how to recover from some of the most common Git mistakes
