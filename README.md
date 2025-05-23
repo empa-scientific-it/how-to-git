@@ -1,8 +1,8 @@
 # how-to-git
 
-> If it fits, I git.
+![](https://imgs.xkcd.com/comics/git.png)
 
-A Git &amp; GitHub basic tutorial
+A Git &amp; GitHub basic tutorial, to learn what you _really_ need to work with it.
 
 ## About
 
