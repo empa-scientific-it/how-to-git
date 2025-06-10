@@ -1,6 +1,6 @@
 # how-to-git
 
-![](https://imgs.xkcd.com/comics/git.png)
+[![](https://imgs.xkcd.com/comics/git.png)](https://xkcd.com/1597)
 
 A Git &amp; GitHub basic tutorial, to learn what you _really_ need to work with it.
 
