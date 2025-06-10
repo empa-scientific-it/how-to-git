@@ -40,3 +40,11 @@ The filename does not matter.
 
 Let's not modify any other fields and click the green "Commit changes" button.
 Congratulations, you have added a file to the repository!
+
+## Why branches?
+> One of the biggest advantages of Git is its branching capabilities.
+Unlike centralized version control systems, Git branches are cheap and easy to merge.
+This facilitates the feature branch workflow popular with many Git users.
+Feature branches provide an isolated environment for every change to your codebase. (from https://www.atlassian.com/git/tutorials/why-git)
+
+TODO
