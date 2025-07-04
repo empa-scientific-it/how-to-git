@@ -34,6 +34,9 @@ After that, please click on the green "Create repository" button.
 Congratulations, you have created your first GitHub repository!
 The repository is empty, so we need to add a file to it.
 
+### Public vs Private repositories
+
+Issue [#9](https://github.com/empa-scientific-it/how-to-git/issues/9)
 
 ### Add a file to the repository
 To add a file to the repository, please click on the "uploading an existing file" link.
@@ -79,8 +82,6 @@ Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
 Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
 
 ## Q: How to collaborate with others?
-
-### Public vs Private repositories
 
 ### Manage access to the repository
 
