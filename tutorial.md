@@ -60,7 +60,7 @@ Congratulations, you have added a file to the repository!
 
 ### Branching out topics
 
-Issue #5.
+Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
 
 > One of the biggest advantages of Git is its branching capabilities.
 
@@ -70,11 +70,11 @@ Feature branches provide an isolated environment for every change to your codeba
 
 ### Switch between topics (branches)
 
-Issue #5
+Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
 
 ### Merge changes
 
-Issue #5
+Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
 
 ## Q: How to collaborate with others?
 
