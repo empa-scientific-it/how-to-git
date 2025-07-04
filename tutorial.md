@@ -58,6 +58,8 @@ Congratulations, you have added a file to the repository!
 
 ### Plan your work and record issues
 
+Issue [#3](https://github.com/empa-scientific-it/how-to-git/issues/3).
+
 ### Branching out topics
 
 Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
