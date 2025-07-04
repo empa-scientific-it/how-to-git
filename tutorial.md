@@ -11,7 +11,11 @@ We will provide instructions on how to use the browser interface alongside the c
 Based on experience, it is simpler not to start with coding examples when learning about Git.
 Instead, we will use a text file, since code is ultimately just text.
 
-## Create a repository
+
+
+## Q: How do I share my text with people?
+
+### Create a repository
 
 To start the tutorial, we need to create a repository.
 The repository will serve as a place to store our text file.
@@ -31,7 +35,7 @@ Congratulations, you have created your first GitHub repository!
 The repository is empty, so we need to add a file to it.
 
 
-## Add a file to the repository
+### Add a file to the repository
 To add a file to the repository, please click on the "uploading an existing file" link.
 In the newly opened page, please drag and drop a text file to the drag and drop area.
 You can create the file on your computer using any available text editor.
@@ -41,10 +45,36 @@ The filename does not matter.
 Let's not modify any other fields and click the green "Commit changes" button.
 Congratulations, you have added a file to the repository!
 
-## Why branches?
+## Q: How do I track changes to my file?
+
+### Change files
+
+### Commit changes
+
+### Check the history
+
+
+## Q: How to work on different topics in parallel?
+
+### Plan your work and record issues
+
+### Branching out topics
 > One of the biggest advantages of Git is its branching capabilities.
-Unlike centralized version control systems, Git branches are cheap and easy to merge.
+
+Unlike centralised version control systems, Git branches are cheap and easy to merge.
 This facilitates the feature branch workflow popular with many Git users.
 Feature branches provide an isolated environment for every change to your codebase. (from https://www.atlassian.com/git/tutorials/why-git)
 
-TODO
+### Switch between topics (branches)
+
+### Merge changes
+
+## Q: How to collaborate with others?
+
+### Public vs Private repositories
+
+### Manage access to the repository
+
+### Report problems and give suggestions
+
+
