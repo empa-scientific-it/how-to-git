@@ -59,6 +59,9 @@ Congratulations, you have added a file to the repository!
 ### Plan your work and record issues
 
 ### Branching out topics
+
+Issue #5.
+
 > One of the biggest advantages of Git is its branching capabilities.
 
 Unlike centralised version control systems, Git branches are cheap and easy to merge.
@@ -67,7 +70,11 @@ Feature branches provide an isolated environment for every change to your codeba
 
 ### Switch between topics (branches)
 
+Issue #5
+
 ### Merge changes
+
+Issue #5
 
 ## Q: How to collaborate with others?
 
