@@ -12,7 +12,6 @@ Based on experience, it is simpler not to start with coding examples when learni
 Instead, we will use a text file, since code is ultimately just text.
 
 
-
 ## Q: How do I share my text with people?
 
 ### Create a repository
@@ -34,6 +33,9 @@ After that, please click on the green "Create repository" button.
 Congratulations, you have created your first GitHub repository!
 The repository is empty, so we need to add a file to it.
 
+### Public vs Private repositories
+
+Issue [#9](https://github.com/empa-scientific-it/how-to-git/issues/9)
 
 ### Add a file to the repository
 To add a file to the repository, please click on the "uploading an existing file" link.
@@ -47,18 +49,30 @@ Congratulations, you have added a file to the repository!
 
 ## Q: How do I track changes to my file?
 
+Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
+
 ### Change files
+
+Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
 
 ### Commit changes
 
+Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
+
 ### Check the history
 
+Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
 
 ## Q: How to work on different topics in parallel?
 
 ### Plan your work and record issues
 
+Issue [#3](https://github.com/empa-scientific-it/how-to-git/issues/3).
+
 ### Branching out topics
+
+Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
+
 > One of the biggest advantages of Git is its branching capabilities.
 
 Unlike centralised version control systems, Git branches are cheap and easy to merge.
@@ -67,14 +81,20 @@ Feature branches provide an isolated environment for every change to your codeba
 
 ### Switch between topics (branches)
 
+Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
+
 ### Merge changes
+
+Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
 
 ## Q: How to collaborate with others?
 
-### Public vs Private repositories
-
 ### Manage access to the repository
+
+Issue [#11](https://github.com/empa-scientific-it/how-to-git/issues/11).
+
 
 ### Report problems and give suggestions
 
+Issue [#3](https://github.com/empa-scientific-it/how-to-git/issues/3).
 
