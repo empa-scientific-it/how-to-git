@@ -69,8 +69,7 @@ There is an important reason for that: Reviewers can give feedback more easily, 
 
 ### Commit changes
 Everyone is familiar with saving a file, after is has been modified.
-In git language, we don't save a file, we commit changes.
-This is because we do not save a new file, but we track changes and therefore commit changes.
+In git language, we do not save a new file, but we track changes and therefore commit changes.
 
 To commit a change, in the web browser you will find the button `Commit Changes`.
 Clicking on it will open a dialouge with different fields to fill:
@@ -79,7 +78,7 @@ Clicking on it will open a dialouge with different fields to fill:
 - **Extended description**: If needed give more detailed information.
 - Commit directly to the *any name* branch: For now choose this.
 - Create a **new branch** for this commit and start a pull request: Branching out will be described further [down](#branching-out-topics).
-And agree with click on `Commit changes`again.
+- Agree with click on `Commit changes`again to finish this step.
 
 ### Check the history
 
