@@ -56,15 +56,15 @@ In this tutorial, we start with changing a text and work in the web browser, as 
 
 ### Change files
 To change a file in the web browser, you open the repository and click on the file you added for tracking changes.
-On the top right you see a small pencil icon :pencil2: to `edit this file`.
+On the top right you see a small pencil icon :pencil2: to `Edit this file`.
 A text editor window will open and you are ready to make changes.
 
 It is very common practice to always only write one sentence per line.
-There are several advantages to that: Reviewers can easier give feedback but you will also find [other reasons to do that](https://sive.rs/1s).
+There is an important reason for that: Reviewers can give feedback more easily, but you will also find [other reasons](https://sive.rs/1s) to do that.
 
 > To write inside the text editor you use Markdown for formatting along with some HTML tags.
 > More information can be found [here](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github#introduction).
-> It's very simple to learn, but not necessary for the turtorial now.
+> It's very simple to learn, but not crucial for the turtorial to follow.
 
 ### Commit changes
 
