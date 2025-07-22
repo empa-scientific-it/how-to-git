@@ -48,8 +48,11 @@ Let's not modify any other fields and click the green "Commit changes" button.
 Congratulations, you have added a file to the repository!
 
 ## Q: How do I track changes to my file?
-
-Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
+In git you don't save a changed file, you track the changes to a file.
+This makes it possible to always see what was changed and if needed, to go back to a previous state.
+A change of file can be done in the web browser or locally.
+Working locally makes sense if you like to work in your known environment e.g. for certain code and execute it.
+In this tutorial, we start with changing a text and work in the web browser, as you don't need to know any code and can search for the right buttons.
 
 ### Change files
 
