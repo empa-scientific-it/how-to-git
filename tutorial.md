@@ -55,8 +55,16 @@ Working locally makes sense if you like to work in your known environment e.g. f
 In this tutorial, we start with changing a text and work in the web browser, as you don't need to know any code and can search for the right buttons.
 
 ### Change files
+To change a file in the web browser, you open the repository and click on the file you added for tracking changes.
+On the top right you see a small pencil icon :pencil2: to `edit this file`.
+A text editor window will open and you are ready to make changes.
 
-Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
+It is very common practice to always only write one sentence per line.
+There are several advantages to that: Reviewers can easier give feedback but you will also find [other reasons to do that](https://sive.rs/1s).
+
+> To write inside the text editor you use Markdown for formatting along with some HTML tags.
+> More information can be found [here](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github#introduction).
+> It's very simple to learn, but not necessary for the turtorial now.
 
 ### Commit changes
 
