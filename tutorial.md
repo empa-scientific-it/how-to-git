@@ -69,7 +69,7 @@ There is an important reason for that: Reviewers can give feedback more easily, 
 
 ### Commit changes
 Everyone is familiar with saving a file, after is has been modified.
-In git language, we do not save a new file, but we track changes and therefore commit changes.
+In git, we do not save a new file, but we track changes and therefore commit changes.
 
 To commit a change, in the web browser you will find the button `Commit Changes`.
 Clicking on it will open a dialouge with different fields to fill:
@@ -81,8 +81,18 @@ Clicking on it will open a dialouge with different fields to fill:
 - Agree with click on `Commit changes`again to finish this step.
 
 ### Check the history
+You can check all sorts of changes in git: from files, from repositories, from the branching network.
+1. To check the history of the file you just have modified, you open the file from your repository.
+On the top right, next to the edit button, you will also find an Clock Icon next to :clock4:`History`.
+It will open up the history of commits showing the previously chosen Commit message, the author of the the Commit and the [Sha](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits#about-commits), which is an unique ID for a commit within Git.
+1. To see the history of the repository you open the repository main page.
+There is a green button called Code.
+Below that you will find one called :clock4:`Commits` with the number of how many commits have beed done to that repository.
+Clicking on this you can see the same information as in the history of a file, but for all the files to the repository.
+1. there is the possbility to see all kinds of statistics about the repository in the Tab :chart_with_upwards_trend:`Insights`
 
-Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
+
+
 
 ## Q: How to work on different topics in parallel?
 
