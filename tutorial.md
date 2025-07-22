@@ -52,7 +52,7 @@ In git you don't save a changed file, you track the changes to a file.
 This makes it possible to always see what was changed and if needed, to go back to a previous state.
 A change of file can be done in the web browser or locally.
 Working locally makes sense if you like to work in your known environment e.g. for certain code and execute it.
-In this tutorial, we start with changing a text and work in the web browser, as you don't need to know any code and can search for the right buttons.
+In this tutorial, we start with changing a text and work in the web browser, as you don't need to know any code and instead can search for the right buttons.
 
 ### Change files
 To change a file in the web browser, you open the repository and click on the file you added for tracking changes.
@@ -62,13 +62,24 @@ A text editor window will open and you are ready to make changes.
 It is very common practice to always only write one sentence per line.
 There is an important reason for that: Reviewers can give feedback more easily, but you will also find [other reasons](https://sive.rs/1s) to do that.
 
+> [!TIP]
 > To write inside the text editor you use Markdown for formatting along with some HTML tags.
 > More information can be found [here](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github#introduction).
 > It's very simple to learn, but not crucial for the turtorial to follow.
 
 ### Commit changes
+Everyone is familiar with saving a file, after is has been modified.
+In git language, we don't save a file, we commit changes.
+This is because we do not save a new file, but we track changes and therefore commit changes.
 
-Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
+To commit a change, in the web browser you will find the button `Commit Changes`.
+Clicking on it will open a dialouge with different fields to fill:
+
+- **Commit message**: Give a name to your changes, later you will be able to search for that changes.
+- **Extended description**: If needed give more detailed information.
+- Commit directly to the *any name* branch: For now choose this.
+- Create a **new branch** for this commit and start a pull request: Branching out will be described further [down](#branching-out-topics).
+And agree with click on `Commit changes`again.
 
 ### Check the history
 
