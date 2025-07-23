@@ -79,7 +79,7 @@ After the person is satisfied with the changes, they can merge them back into th
 
 The main branch in Git is often called `main` or `master`, and it represents the stable version of your code.
 When you want to work on a new feature or fix a bug, you create a new branch from the `main` branch.
-One should not hesitate to create branches, cause they are cheap to create and merge.
+One should not hesitate to create branches, cause they are lightweight and simple to create and merge.
 
 To create a new branch, you can use the GitHub interface.
 There are different ways how to create branches: From the repository; In the dialogue window for a commit; from an issue - and probably there are even more possibilities.
