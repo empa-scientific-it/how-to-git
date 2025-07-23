@@ -72,14 +72,16 @@ Issue [#3](https://github.com/empa-scientific-it/how-to-git/issues/3).
 ### Branching out topics
 
 Often, you will want to work on different topics in parallel and keep them separate from the main codebase.
-Those include new features, bug fixes, or experiments.
+Those include the development of new features, bug fixes, or experiments.
 This is where Git's branching capabilities come into play.
 
 The main branch in Git is often called `main` or `master`, and it represents the stable version of your code.
 When you want to work on a new feature or fix a bug, you create a new branch from the `main` branch.
 One should not hesitate to create branches, cause they are cheap to create and merge.
 
-To create a new branch, you can use the GitHub interface:
+To create a new branch, you can use the GitHub interface.
+There are different ways how to create branches: From the repository; In the dialogue window for a commit; from an issue - and probably there are even more possibilities.
+Following the one from the repository is explained:
 1. Go to your repository.
 2. Click on the "main" dropdown button.
 
@@ -96,7 +98,7 @@ You will notice that the new branch is simply a pointer to a specific commit in 
 If the branch is freshly created, it will point to the same commit as the `main` branch, so the code in the new branch is still the same as in the `main` branch.
 However, as you make changes in the new branch, it will diverge from the `main` branch and will have parts that are different from the `main` branch.
 
-### Switch between topics (branches)
+### Switch between branched-out topics
 
 To switch between branches, you can use the GitHub interface:
 1. Go to your repository.
@@ -104,10 +106,12 @@ To switch between branches, you can use the GitHub interface:
 
 ![Branch dropdown example](images/branch-dropdown.png)
 
-3. Select the branch you want to switch to (e.g., `feature-xyz`).
+3. Select the branch for your topic of interest you want to switch to (e.g., `feature-xyz`).
 
 Once you switch to a branch, the files in your repository will be updated to reflect the state of that branch.
-You can now make changes to the files, commit them, and push them to the selected branch.
+Meaning, it can be that it looks different from before, since you changed files for new features or bug fixes.
+You can now make changes to the files.
+Once you commit them, they will be pushed, as in saved, to that branch that you chose from the drop-down in the beginning.
 
 ### Develop in a branch
 
