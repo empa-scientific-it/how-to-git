@@ -77,11 +77,14 @@ This is where Git's branching capabilities come into play.
 
 The main branch in Git is often called `main` or `master`, and it represents the stable version of your code.
 When you want to work on a new feature or fix a bug, you create a new branch from the `main` branch.
-One should not hesitate to create a new branch for every new feature or bug fix, cause they are cheap to create and merge.
+One should not hesitate to create branches, cause they are cheap to create and merge.
 
 To create a new branch, you can use the GitHub interface:
 1. Go to your repository.
-2. Click on the "Branch: main" dropdown button.
+2. Click on the "main" dropdown button.
+
+![Branch dropdown example](images/branch-dropdown.png)
+
 3. In the text field, type the name of your new branch (e.g., `feature-xyz`).
 4. Press Enter to create the branch.
 
@@ -90,7 +93,7 @@ And now you can switch to this branch and start working on your new feature or b
 If you are curious what it looks like in the commit history, you can go to "Insights" tab of your repository and select "Network" from the left sidebar.
 This will show you a graphical representation of your branches and commits.
 You will notice that the new branch is simply a pointer to a specific commit in the history.
-If the branch is freshly created, it will point to the same commit as the `main` branch, so the code in the new branch is the same as in the `main` branch.
+If the branch is freshly created, it will point to the same commit as the `main` branch, so the code in the new branch is still the same as in the `main` branch.
 However, as you make changes in the new branch, it will diverge from the `main` branch and will have parts that are different from the `main` branch.
 
 ### Switch between topics (branches)
@@ -125,7 +128,7 @@ To do that, you can use the GitHub interface:
 2. Click on the "Pull requests" tab.
 3. Click on the green "New pull request" button.
 
-[![New pull request button example](images/new-pull-request.png)
+![New pull request button example](images/new-pull-request.png)
 
 4. Select the branch you want to merge from (e.g., `feature-xyz`) and the branch you want to merge into (e.g., `main`).
    After that, you will see a comparison of the two branches and a list of commits that will be merged.
