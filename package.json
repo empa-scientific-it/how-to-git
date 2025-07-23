@@ -1,6 +1,6 @@
 {
   "name": "how-to-git",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "[![](https://imgs.xkcd.com/comics/git.png)](https://xkcd.com/1597)",
   "main": "index.js",
   "scripts": {
