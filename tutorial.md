@@ -101,16 +101,6 @@ Meaning, it can be that it looks different from before, since you changed files 
 You can now make changes to the files.
 Once you commit them, they will be pushed, as in saved, to that branch that you chose from the drop-down in the beginning.
 
-### Develop in a branch
-
-Developing in a branch is a common practice in Git.
-It allows you to work on new features or bug fixes without affecting the main codebase.
-
-That also gives you a freedom to experiment with your code, add changes, remove changes and even rewrite the history of your branch.
-The idea here is that once your changes are ready, you can merge them back into the `main` branch and write a clean commit message that describes the changes you made.
-Once you are in a branch, you can make changes to your files, commit them and push them to the remote repository.
-You can also create new files, delete files, and rename files - everything will remain in the branch until you decide to merge it back into the `main` branch.
-
 
 ### Merge branches
 
