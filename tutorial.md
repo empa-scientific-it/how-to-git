@@ -117,9 +117,29 @@ Once you are in a branch, you can make changes to your files, commit them and pu
 You can also create new files, delete files, and rename files - everything will remain in the branch until you decide to merge it back into the `main` branch.
 
 
-### Merge changes
+### Merge branches
 
-Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
+Once you are done with your work in a branch, you can merge it back into the `main` branch making sure that your changes are integrated into the main codebase.
+To do that, you can use the GitHub interface:
+1. Go to your repository.
+2. Click on the "Pull requests" tab.
+3. Click on the green "New pull request" button.
+
+[![New pull request button example](images/new-pull-request.png)
+
+4. Select the branch you want to merge from (e.g., `feature-xyz`) and the branch you want to merge into (e.g., `main`).
+   After that, you will see a comparison of the two branches and a list of commits that will be merged.
+5. Click on the green "Create pull request" button.
+6. In the newly opened page, you can add a title and a description for your pull request.
+   This is a good place to explain what changes you made and why they are important.
+   Also, you can assign reviewers to your pull request, so they can review your changes and give feedback.
+7. Once you are done, click on the green "Create pull request" button again.
+
+After that, your pull request will be created and you can see it in the "Pull requests" tab.
+You can continue to work on your branch, and after every commit, the pull request will be updated with the new changes.
+Once the work is done, you can merge the pull request by clicking on the green button that says "Merge pull request", or "Squash and merge", or "Rebase and merge".
+This will merge your changes into the `main` branch and close the pull request.
+
 
 ## Q: How to collaborate with others?
 
