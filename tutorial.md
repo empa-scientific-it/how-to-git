@@ -144,7 +144,8 @@ To do that, you can use the GitHub interface:
 
 After that, your pull request will be created and you can see it in the "Pull requests" tab.
 You can continue to work on your branch, and after every commit, the pull request will be updated with the new changes.
-Once the work is done, you can merge the pull request by clicking on the green button that says "Merge pull request", or "Squash and merge", or "Rebase and merge".
+Once the work is done, you can merge the pull request by clicking on the green button that says "Merge pull request", "Squash and merge", or "Rebase and merge".
+Usually, you can use Merge or Squash, but more on this topic can be found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges).
 This will merge your changes into the `main` branch and close the pull request.
 
 
