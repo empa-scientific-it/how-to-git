@@ -92,7 +92,7 @@ Following the one from the repository is explained:
 3. In the text field, type the name of your new branch (e.g., `feature-xyz`).
 4. Press Enter to create the branch.
 
-And now you can switch to this branch and start working on your new feature or bug fix.
+Now you've created a new branch, so you can start working on your new feature or bug fix.
 
 If you are curious what it looks like in the commit history, you can go to "Insights" tab of your repository and select "Network" from the left sidebar.
 This will show you a graphical representation of your branches and commits.
