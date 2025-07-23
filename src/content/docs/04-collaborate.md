@@ -1,0 +1,14 @@
+---
+title: How to collaborate with others?
+slug: collaborate
+sidebar:
+  order: 4
+---
+
+### Manage access to the repository
+
+Issue [#11](https://github.com/empa-scientific-it/how-to-git/issues/11).
+
+### Report problems and give suggestions
+
+Issue [#3](https://github.com/empa-scientific-it/how-to-git/issues/3).

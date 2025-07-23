@@ -1,0 +1,29 @@
+{
+  "name": "how-to-git",
+  "version": "1.0.0",
+  "description": "[![](https://imgs.xkcd.com/comics/git.png)](https://xkcd.com/1597)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/empa-scientific-it/how-to-git.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/empa-scientific-it/how-to-git/issues"
+  },
+  "homepage": "https://github.com/empa-scientific-it/how-to-git#readme",
+  "dependencies": {
+    "@astrojs/starlight": "^0.35.1",
+    "astro": "^5.12.2",
+    "astro-icon": "^1.1.5",
+    "starlight-theme-flexoki": "^0.1.0"
+  }
+}
