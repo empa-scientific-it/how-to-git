@@ -35,9 +35,24 @@ The repository is empty, so we need to add a file to it.
 
 ### Public vs Private repositories
 
-Issue [#9](https://github.com/empa-scientific-it/how-to-git/issues/9)
+When creating a repository, you can choose whether it will be public or private.
+This choice affects who can see the content of the repository and affects how you can collaborate with others.
+
+- **Public repository**: Anyone can see the content of the repository.
+  This is useful for open-source projects or when you want to share your work with the world.
+  The repository can be forked, which means that anyone can create a copy of the repository and work on it independently.
+  People can also report issues, suggest changes, and contribute to the project.
+
+- **Private repository**: Only you (or the organisation members) and the people you invite can see the content of the repository.
+  This is useful for personal projects or when you want to keep your work private.
+  You can still invite people to collaborate on the repository, but they will need to have a GitHub account and be granted access explicitly.
+
+One can think of setting the visibility of the repository as an initial step to control access to the content and collaboration features.
+With more features, you can manage access to the repository in more detail, such as granting read or write access to specific people or teams.
+However, those details will be discussed later in the [Manage access to the repository](#manage-access-to-the-repository) section.
 
 ### Add a file to the repository
+
 To add a file to the repository, please click on the "uploading an existing file" link.
 In the newly opened page, please drag and drop a text file to the drag and drop area.
 You can create the file on your computer using any available text editor.
@@ -91,8 +106,8 @@ Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
 
 ### Manage access to the repository
 
-Issue [#11](https://github.com/empa-scientific-it/how-to-git/issues/11).
-
+To start let's make it clear that the repository can belong to one person or to a group of people that is called an organization.
+The fact that repository can be private or public already influences some aspects of repository's access management, as discussed in the [Public vs Private repositories](#public-vs-private-repositories) section, so we will not repeat it here.
 
 ### Report problems and give suggestions
 
