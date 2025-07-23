@@ -74,8 +74,8 @@ Issue [#3](https://github.com/empa-scientific-it/how-to-git/issues/3).
 Often, you will want to work on different topics in parallel and keep them separate from the main codebase.
 Those include the development of new features, bug fixes, or experiments.
 Git is offering the possibility for branching out.
-This is like working on isolated copies of your files, try out new things until everything works.
-After the person is satisfied with the changes, they can merge them back into the main codebase.
+This is like working on isolated copies of your files, try out new things until everything works: in Git, this is called a branch.
+After the person is satisfied with the changes, they can merge them back into the main codebase (`main` branch or `master` branch).
 
 The main branch in Git is often called `main` or `master`, and it represents the stable version of your code.
 When you want to work on a new feature or fix a bug, you create a new branch from the `main` branch.
