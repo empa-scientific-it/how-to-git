@@ -80,7 +80,7 @@ Following the one from the repository is explained:
 
 Now you've created a new branch, so you can start working on your new feature or bug fix.
 
-If you are curious what it looks like in the commit history, you can go to "Insights" tab of your repository and select "Network" from the left sidebar.
+If you are curious what it looks like in the commit history, you can always check the "Network" graph, described in the section [Check the history](track-changes/#check-the-history).
 This will show you a graphical representation of your branches and commits.
 You will notice that the new branch is simply a pointer to a specific commit in the history.
 If the branch is freshly created, it will point to the same commit as the `main` branch, so the code in the new branch is still the same as in the `main` branch.
