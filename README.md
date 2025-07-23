@@ -1,4 +1,9 @@
-# how-to-git
+# How To Git
+
+>[!NOTE]
+> You can go through the tutorial [here](https://how-to-git.netlify.app)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/52bf2d5a-0301-4e11-bd09-3cd00ac4eeaf/deploy-status)](https://app.netlify.com/projects/how-to-git/deploys)
 
 [![](https://imgs.xkcd.com/comics/git.png)](https://xkcd.com/1597)
 

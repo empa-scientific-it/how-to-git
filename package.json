@@ -24,6 +24,7 @@
     "@astrojs/starlight": "^0.35.1",
     "astro": "^5.12.2",
     "astro-icon": "^1.1.5",
+    "remark-gemoji": "^8.0.0",
     "starlight-theme-flexoki": "^0.1.0"
   }
 }
