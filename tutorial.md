@@ -49,20 +49,6 @@ Congratulations, you have added a file to the repository!
 
 ## Q: How do I track changes to my file?
 
-Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
-
-### Change files
-
-Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
-
-### Commit changes
-
-Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
-
-### Check the history
-
-Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
-
 ## Q: How to work on different topics in parallel?
 
 ### Plan your work and record issues
