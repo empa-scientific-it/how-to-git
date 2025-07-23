@@ -98,7 +98,9 @@ However, as you make changes in the new branch, it will diverge from the `main` 
 To switch between branches, you can use the GitHub interface:
 1. Go to your repository.
 2. Click on the "main" dropdown button right below the repository name.
+
 ![Branch dropdown example](images/branch-dropdown.png)
+
 3. Select the branch you want to switch to (e.g., `feature-xyz`).
 
 Once you switch to a branch, the files in your repository will be updated to reflect the state of that branch.
