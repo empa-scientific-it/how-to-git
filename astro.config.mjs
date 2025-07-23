@@ -4,6 +4,8 @@ import starlightThemeFlexoki from 'starlight-theme-flexoki';
 
 
 export default defineConfig({
+  site: 'https://empa-scientific-it.github.io/',
+  base: 'how-to-git',
   integrations: [
     starlight({
       title: 'How To Git',
