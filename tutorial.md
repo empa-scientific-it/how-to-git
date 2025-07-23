@@ -71,17 +71,49 @@ Issue [#3](https://github.com/empa-scientific-it/how-to-git/issues/3).
 
 ### Branching out topics
 
-Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
+Often, you will want to work on different topics in parallel and keep them separate from the main codebase.
+Those include new features, bug fixes, or experiments.
+This is where Git's branching capabilities come into play.
 
-> One of the biggest advantages of Git is its branching capabilities.
+The main branch in Git is often called `main` or `master`, and it represents the stable version of your code.
+When you want to work on a new feature or fix a bug, you create a new branch from the `main` branch.
+One should not hesitate to create a new branch for every new feature or bug fix, cause they are cheap to create and merge.
 
-Unlike centralised version control systems, Git branches are cheap and easy to merge.
-This facilitates the feature branch workflow popular with many Git users.
-Feature branches provide an isolated environment for every change to your codebase. (from https://www.atlassian.com/git/tutorials/why-git)
+To create a new branch, you can use the GitHub interface:
+1. Go to your repository.
+2. Click on the "Branch: main" dropdown button.
+3. In the text field, type the name of your new branch (e.g., `feature-xyz`).
+4. Press Enter to create the branch.
+
+And now you can switch to this branch and start working on your new feature or bug fix.
+
+If you are curious what it looks like in the commit history, you can go to "Insights" tab of your repository and select "Network" from the left sidebar.
+This will show you a graphical representation of your branches and commits.
+You will notice that the new branch is simply a pointer to a specific commit in the history.
+If the branch is freshly created, it will point to the same commit as the `main` branch, so the code in the new branch is the same as in the `main` branch.
+However, as you make changes in the new branch, it will diverge from the `main` branch and will have parts that are different from the `main` branch.
 
 ### Switch between topics (branches)
 
-Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
+To switch between branches, you can use the GitHub interface:
+1. Go to your repository.
+2. Click on the "main" dropdown button right below the repository name.
+![Branch dropdown example](images/branch-dropdown.png)
+3. Select the branch you want to switch to (e.g., `feature-xyz`).
+
+Once you switch to a branch, the files in your repository will be updated to reflect the state of that branch.
+You can now make changes to the files, commit them, and push them to the selected branch.
+
+### Develop in a branch
+
+Developing in a branch is a common practice in Git.
+It allows you to work on new features or bug fixes without affecting the main codebase.
+
+That also gives you a freedom to experiment with your code, add changes, remove changes and even rewrite the history of your branch.
+The idea here is that once your changes are ready, you can merge them back into the `main` branch and write a clean commit message that describes the changes you made.
+Once you are in a branch, you can make changes to your files, commit them and push them to the remote repository.
+You can also create new files, delete files, and rename files - everything will remain in the branch until you decide to merge it back into the `main` branch.
+
 
 ### Merge changes
 
