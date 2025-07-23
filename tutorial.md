@@ -68,11 +68,11 @@ This makes it easier for reviewers to provide feedback, but there are also [othe
 > It's an easy syntax to learn, but not crucial for this tutorial.
 
 ### Commit changes
-Everyone is familiar with saving a file, after is has been modified.
+Everyone is familiar with saving a file after is has been modified.
 In Git, however, you don’t simply save the file - instead, you commit the changes to track what was modified.
 
 To commit a change after you have modified the file, you can use the button `Commit Changes` in the web browser.
-Clicking on it will open a dialouge with different fields to fill:
+Clicking on it will open a dialogue window with different fields to fill:
 
 - **Commit message**: Give a name to your changes - later you will be able to search for them.
 - **Extended description**: If needed, give more detailed information.
@@ -81,10 +81,10 @@ Clicking on it will open a dialouge with different fields to fill:
 - Agree by clicking on `Commit changes` again.
 
 ### Check the history
-You can check all sorts of changes in git: from files, from repository, from the whole repository network.
-1. To check the history of the file you just have modified, you open the file from your repository.
-On the top right, next to the edit button, you will also find an clock Icon next to :clock4:`History`.
-It will open up the history of commits showing the previously chosen Commit message, the author of the the Commit and the [Sha](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits#about-commits), which is an unique ID for a commit within Git.
+In Git, you can view all kinds of changes - whether for a single file, the entire repository, or even across the full network of repositories.
+1. To check the **history of the file** you just modified, open that file in your repository.
+At the top-right corner, above the edit button, you will find a clock icon labeled :clock4:`History`.
+Clicking it will open the history of commits, showing the commit message, the author of the commit and the [SHA](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits#about-commits), which is a unique identifier for each commit within Git.
 1. To see the **history of all changes in the repository** you are currently working on, go to the repository's main page.
 Under the green `Code` button, you will find another one, labeled :clock4:`Commits`, followed by the number of commits made to the current branch.
 By clicking this you can see the same information as in the history of a file, but for all the files of the repository.
