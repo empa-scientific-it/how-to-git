@@ -48,50 +48,49 @@ Let's not modify any other fields and click the green "Commit changes" button.
 Congratulations, you have added a file to the repository!
 
 ## Q: How do I track changes to my file?
-In git you don't save a changed file, you track the changes to a file.
-This makes it possible to always see what was changed and if needed, to go back to a previous state.
-A change of file can be done in the web browser or locally.
-Working locally makes sense if you like to work in your known environment e.g. for certain code and execute it.
-In this tutorial, we start with changing a text and work in the web browser, as you don't need to know any code and instead can search for the right buttons.
+In Git, you don't save a changed file - instead, you track the changes made to it.
+This allows you to always see what was modified at any point in time and, if necessary, revert to a previous version.
+File changes can be made either directly in the web browser or locally on your computer.
+Working locally is useful if you prefer working in your familiar development environment, especially when writing and running code.
+In this tutorial, we will start with editing a text file using the web browser, so you won't need to write any code - you can simply use the appropriate buttons.
 
 ### Change files
-To change a file in the web browser, you open the repository and click on the file you added for tracking changes.
-On the top right you see a small pencil icon :pencil2: to `Edit this file`.
-A text editor window will open and you are ready to make changes.
+To modify a file in the web browser, start by opening the repository and clicking on the file you've added for tracking changes.
+At the top-right corner you will see a small pencil icon :pencil2: labeled `Edit this file`.
+By clicking on it, a text editor window will open, where you can begin making changes.
 
-It is very common practice to always only write one sentence per line.
-There is an important reason for that: Reviewers can give feedback more easily, but you will also find [other reasons](https://sive.rs/1s) to do that.
+It is a common best practice to always write only one sentence per line.
+This makes it easier for reviewers to provide feedback, but there are also [other good reasons](https://sive.rs/1s) to follow this approach.
 
 > [!TIP]
-> To write inside the text editor you use Markdown for formatting along with some HTML tags.
+> To write inside the text editor, you use Markdown for formatting, along with some HTML tags.
 > More information can be found [here](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github#introduction).
-> It's very simple to learn, but not crucial for the turtorial to follow.
+> It's an easy syntax to learn, but not crucial for this tutorial.
 
 ### Commit changes
 Everyone is familiar with saving a file, after is has been modified.
-In git, we do not save a new file, but we track changes and therefore commit changes.
+In Git, however, you don’t simply save the file - instead, you commit the changes to track what was modified.
 
-To commit a change after you changed the file, in the web browser you will find the button `Commit Changes`.
+To commit a change after you have modified the file, you can use the button `Commit Changes` in the web browser.
 Clicking on it will open a dialouge with different fields to fill:
 
-- **Commit message**: Give a name to your changes, later you will be able to search for that changes.
-- **Extended description**: If needed give more detailed information.
+- **Commit message**: Give a name to your changes - later you will be able to search for them.
+- **Extended description**: If needed, give more detailed information.
 - Commit directly to the *any name* branch: For now choose this.
 - Create a **new branch** for this commit and start a pull request: Branching out will be described further [down](#branching-out-topics).
-- Agree with click on `Commit changes`again to finish this step.
+- Agree by clicking on `Commit changes` again.
 
 ### Check the history
 You can check all sorts of changes in git: from files, from repository, from the whole repository network.
 1. To check the history of the file you just have modified, you open the file from your repository.
 On the top right, next to the edit button, you will also find an clock Icon next to :clock4:`History`.
 It will open up the history of commits showing the previously chosen Commit message, the author of the the Commit and the [Sha](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits#about-commits), which is an unique ID for a commit within Git.
-1. To see the history of the repository you currently work on you open the repository main page.
-There is a green button called Code.
-Below that you will find one called :clock4:`Commits` with the number of how many commits have beed done to that repository in the current branch.
-Clicking on this you can see the same information as in the history of a file, but for all the files to the repository.
-1. There is the possbility to see all kinds of statistics about the repository in the Tab :chart_with_upwards_trend:`Insights`.
-Clickin on it will open an overview, where on the right side there are a lot of further options.
-In `Network` it's possible to see the timeline of the most recent commits to the repository, inlcuding branches and forks - which are described later in this turtorial.
+1. To see the **history of all changes in the repository** you are currently working on, go to the repository's main page.
+Under the green `Code` button, you will find another one, labeled :clock4:`Commits`, followed by the number of commits made to the current branch.
+By clicking this you can see the same information as in the history of a file, but for all the files of the repository.
+1. There is the possibility to see all kinds of **statistics about the repository** in the Tab :chart_with_upwards_trend:`Insights`.
+There you will find an overview, with lots of further options on the left-hand side menu.
+For example, under `Network` you can see the timeline of the most recent commits to the repository, including branches and forks - which are described later in this tutorial.
 
 ## Q: How to work on different topics in parallel?
 
