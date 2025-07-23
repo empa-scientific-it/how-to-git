@@ -104,7 +104,8 @@ Once you commit them, they will be pushed, as in saved, to that branch that you 
 
 ### Merge branches
 
-Once you are done with your work in a branch, you can merge it back into the `main` branch making sure that your changes are integrated into the main codebase.
+Once you are happy with your work done in a branch, you can merge it back into the `main` branch.
+This ensures that your changes are integrated into the main codebase, so they can be used by others.
 To do that, you can use the GitHub interface:
 1. Go to your repository.
 2. Click on the "Pull requests" tab.
