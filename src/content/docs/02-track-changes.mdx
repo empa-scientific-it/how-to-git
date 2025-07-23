@@ -5,6 +5,8 @@ sidebar:
   order: 2
 ---
 
+import { Aside } from '@astrojs/starlight/components';
+
 In Git, you don't save a changed file - instead, you track the changes made to it.
 This allows you to always see what was modified at any point in time and, if necessary, revert to a previous version.
 File changes can be made either directly in the web browser or locally on your computer.
@@ -19,10 +21,14 @@ By clicking on it, a text editor window will open, where you can begin making ch
 It is a common best practice to always write only one sentence per line.
 This makes it easier for reviewers to provide feedback, but there are also [other good reasons](https://sive.rs/1s) to follow this approach.
 
-> [!TIP]
-> To write inside the text editor, you use Markdown for formatting, along with some HTML tags.
-> More information can be found [here](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github#introduction).
-> It's an easy syntax to learn, but not crucial for this tutorial.
+<Aside type="tip">
+
+  To write inside the text editor, you use Markdown for formatting, along with some HTML tags.
+  More information can be found [here](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github#introduction).
+  It's an easy syntax to learn, but not crucial for this tutorial.
+
+</Aside>
+
 
 ### Commit changes
 Everyone is familiar with saving a file after is has been modified.
