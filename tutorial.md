@@ -138,6 +138,7 @@ To do that, you can use the GitHub interface:
    After that, you will see a comparison of the two branches and a list of commits that will be merged.
 5. Click on the green "Create pull request" button.
 6. In the newly opened page, you can add a title and a description for your pull request.
+Later you will be able to find that pull request by that title.
    This is a good place to explain what changes you made and why they are important.
    Also, you can assign reviewers to your pull request, so they can review your changes and give feedback.
 7. Once you are done, click on the green "Create pull request" button again.
