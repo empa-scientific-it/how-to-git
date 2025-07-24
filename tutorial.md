@@ -66,7 +66,7 @@ When you want to work on a new feature or fix a bug, you create a new branch fro
 One should not hesitate to create branches, cause they are lightweight and simple to create and merge.
 
 To create a new branch, you can use the GitHub interface.
-There are different ways how to create branches: From the repository; In the dialogue window for a commit; from an issue - and probably there are even more possibilities.
+There are different ways to create branches: from the repository in the dialogue window for a commit, from an issue, and a few more.
 Following the one from the repository is explained:
 1. Go to your repository.
 2. Click on the "main" dropdown button.
@@ -115,7 +115,7 @@ To do that, you can use the GitHub interface:
    After that, you will see a comparison of the two branches and a list of commits that will be merged.
 5. Click on the green "Create pull request" button.
 6. In the newly opened page, you can add a title and a description for your pull request.
-Later you will be able to find that pull request by that title.
+   Later you will be able to find that pull request by that title.
    This is a good place to explain what changes you made and why they are important.
    Also, you can assign reviewers to your pull request, so they can review your changes and give feedback.
 7. Once you are done, click on the green "Create pull request" button again.
