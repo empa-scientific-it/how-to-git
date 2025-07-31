@@ -1,0 +1,51 @@
+---
+title: How can changes be reviewed?
+slug: review
+sidebar:
+  order: 5
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+[Introduction with following topics]
+- changes can be reviewed before merges from branches to the main
+- reviews enables others to give feedback
+- feedback helps to see content with other eyes and improves
+- [are there Different kinds of reviews? or only code review, resp. PR review?]
+- Reviews can be made obligatory
+
+<Aside type="tip">
+[Maybe rewrite sentence]
+Be friendly and specific: say what has changed or why you need changes or a review.
+</Aside>
+
+### Request review from author
+[Description TODO]
+- When changes in a branch are finished
+- When it should be merged with main branch
+- ask for review from someone that is close to that topic
+
+### Request changes from reviewer
+[Description TODO]
+- Since the text to be reviewed was written one line per sentence (maybe reference to where we described this) the requested changes can be more easier done.
+- Pick one sentence and say how or why to change it.
+- Best weay to cite it and make the changes
+
+
+### Author handling of Request changes from reviewer
+[Description TODO]
+- accepting them
+- not accepting them
+- adressing them in new issues for later changes?
+
+<Aside type="tip">
+[Maybe this should be a Note and not a tip, if it is possible]
+Changes and reviews will go back and forth until every party is satisfied with the content.
+</Aside>
+
+
+### Request a change to some part of the text from someone
+[Describe TODO]
+- Best way is to create an issue, assing it to that creator to ask for changes in certain topic
+- person can later create a branche from that issue, create changes and ask you to be the reviewer
+- are there other ways?
