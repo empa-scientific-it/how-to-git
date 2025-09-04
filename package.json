@@ -22,9 +22,12 @@
   "homepage": "https://github.com/empa-scientific-it/how-to-git#readme",
   "dependencies": {
     "@astrojs/starlight": "^0.35.1",
+    "@fontsource-variable/space-grotesk": "^5.2.8",
+    "@fontsource/space-mono": "^5.2.8",
+    "@iconify-json/lucide": "^1.2.58",
     "astro": "^5.12.2",
     "astro-icon": "^1.1.5",
     "remark-gemoji": "^8.0.0",
-    "starlight-theme-flexoki": "^0.1.0"
+    "starlight-ion-theme": "^2.3.1"
   }
 }
