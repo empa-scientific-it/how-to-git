@@ -49,43 +49,12 @@ Congratulations, you have added a file to the repository!
 
 ## Q: How do I track changes to my file?
 
-Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
-
-### Change files
-
-Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
-
-### Commit changes
-
-Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
-
-### Check the history
-
-Issue [#10](https://github.com/empa-scientific-it/how-to-git/issues/10)
-
 ## Q: How to work on different topics in parallel?
 
 ### Plan your work and record issues
 
 Issue [#3](https://github.com/empa-scientific-it/how-to-git/issues/3).
 
-### Branching out topics
-
-Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
-
-> One of the biggest advantages of Git is its branching capabilities.
-
-Unlike centralised version control systems, Git branches are cheap and easy to merge.
-This facilitates the feature branch workflow popular with many Git users.
-Feature branches provide an isolated environment for every change to your codebase. (from https://www.atlassian.com/git/tutorials/why-git)
-
-### Switch between topics (branches)
-
-Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
-
-### Merge changes
-
-Issue [#5](https://github.com/empa-scientific-it/how-to-git/issues/5).
 
 ## Q: How to collaborate with others?
 
