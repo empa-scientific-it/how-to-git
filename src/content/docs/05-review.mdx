@@ -1,0 +1,60 @@
+---
+title: How can changes be reviewed?
+slug: review
+sidebar:
+  order: 5
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+### What are Reviews good for? 
+When working together on a project, changes are usually made in branches and checked before merging into the main branch.
+Reviews let teammates give feedback, helping you see your work from a fresh perspective and improve it.
+Reviews aren’t just for code; they can also cover documentation, designs, or settings.
+They can even be made required to keep quality and consistency high.
+The common types are code reviews, resp. pull request (PR) reviews, but reviews can also be done on other source of text.
+In Github projects, reviews can be made obligatory, which can help for supervising changes.
+
+<Aside type="tip">
+Be friendly and specific while reviewing: Tell what needs to be changed and how, and give a reason if it is not clear.
+</Aside>
+
+### Request a review as an author
+A review should be requested, if the work on a topic has finished.
+If the work on a topic has finished, means the branch can be merged to the main branch.
+For that a Pull Request is opened and, one can choose a review from someone specific.
+It makes more sense, if the person to review it is not involved in that specific topic, but is close to the it.
+
+- To create a PR review, you first open a [Pull Request](../docs/03-parallel-topics.mdx#merge-branches).
+- On the top right you can choose who to assign for the review.
+- Now you need to wait for the reviewer to be finished
+
+
+### Make changes as a reviewer
+
+As a reviewer you will get a notification (depending on your settings) that you are requested.
+1. You can start the review by clicking on the green button.
+1. Go to a line of text that you would change, click on the plus symbol :heavy_plus_sign: (Remember, we recommend to always only use one Line per sentence [here](../docs/02-track-changes.mdx#change-files))
+3. Either add a comment, or choose to make a suggestion (click on the plusminus symbol), which gives you the option to do changes to a sentence.
+  - A suggestion can simply be accepted by the author, where as a comment just gives a hint for a change
+4. Click the green button to start the review or add review to previous.
+5. When you finsished your comments click the green button for "finish your review" on the top
+  - This will give a notification to the author for further actions
+
+### Author handling of Request changes from reviewer
+[Description TODO]
+- accepting them
+- not accepting them
+- adressing them in new issues for later changes?
+
+<Aside type="tip">
+[Maybe this should be a Note and not a tip, if it is possible]
+Changes and reviews will go back and forth until every party is satisfied with the content.
+</Aside>
+
+
+### Request a change to some part of the text from someone
+[Describe TODO]
+- Best way is to create an issue, assing it to that creator to ask for changes in certain topic
+- person can later create a branche from that issue, create changes and ask you to be the reviewer
+- are there other ways?
