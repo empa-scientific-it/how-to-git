@@ -9,7 +9,7 @@ import { Steps } from "@astrojs/starlight/components";
 
 ### Organize your work with issues and branches
 
-We previously discussed how to work with [issues](./03-plan-work.mdx) and [branches](./04-parallel-topics.mdx).
+We previously discussed how to work with [issues](/plan-work) and [branches](/parallel-topics).
 Issues help you keep track of tasks, while branches allow you to work on different topics in parallel.
 Combining these two features can significantly enhance the productivity of your team.
 
@@ -17,7 +17,7 @@ Combining these two features can significantly enhance the productivity of your 
 
 In general, when you create a new branch for a specific task, it is a good practice to link it to the corresponding issue.
 To link an issue to a branch, you can include the issue number in the branch name (e.g., `3-issue-name` for issue `#3`).
-This makes it clear which issue the branch is addressing.
+This way we clearly indicate which issue that branch is addressing.
 
 There is also a more **automated way** to link branches to issues:
 
@@ -43,3 +43,10 @@ You can modify the branch name, if needed, but it is recommended to keep at leas
 
 ![Dialog to create branch from issue](src/assets/issue-branch-dialog.png)
 
+### Closing an issue with a branch
+
+Once you consider an issue to be completed and you are ready to [merge your branch](/parallel-topics/#merge-branches), it is time to create a **pull request**.
+It is a good practice to link the corresponding issue to the pull request, by adding it to the pull request's description.
+To do that, you can simply write `#` followed by the issue number (e.g., `#3`) and the link will be automatically created.
+If you also combine that with specific keywords then the issue can be **automatically closed** when the pull request is merged.
+For example, you can write "Closes #3" or "Fixes #3" in the pull request description.
