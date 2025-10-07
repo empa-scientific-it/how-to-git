@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightThemeFlexoki from 'starlight-theme-flexoki';
 import remarkGemoji from 'remark-gemoji';
+import rehypeTargetBlank from './src/plugins/rehype-target-blank.js';
 
 
 export default defineConfig({
@@ -15,5 +16,8 @@ export default defineConfig({
       description: 'A guide to Git',
       plugins: [starlightThemeFlexoki()],
     })
-  ]
+  ],
+  markdown: {
+    rehypePlugins: [rehypeTargetBlank],
+  },
 });
