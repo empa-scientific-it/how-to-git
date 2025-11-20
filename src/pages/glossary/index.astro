@@ -1,0 +1,59 @@
+---
+import { getCollection } from "astro:content";
+import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
+import GlossaryTerm from "@components/GlossaryTerm.astro";
+
+const glossaryEntries = await getCollection("glossary");
+const sortedEntries = glossaryEntries.sort((a, b) =>
+    a.data.term.localeCompare(b.data.term),
+);
+
+// Group by first letter
+const grouped = sortedEntries.reduce(
+    (acc, entry) => {
+        const letter = entry.data.term[0].toUpperCase();
+        if (!acc[letter]) acc[letter] = [];
+        acc[letter].push(entry);
+        return acc;
+    },
+    {} as Record<string, typeof sortedEntries>,
+);
+---
+
+<StarlightPage
+    frontmatter={{
+        title: "Glossary",
+        description: "A glossary of Git and GitHub terminology",
+    }}
+    headings={Object.keys(grouped)
+        .sort()
+        .map((letter) => ({
+            depth: 2,
+            slug: letter.toLowerCase(),
+            text: letter,
+        }))}
+>
+    <p>A glossary of Git terms and concepts.</p>
+
+    {
+        Object.entries(grouped)
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([letter, entries]) => (
+                <section>
+                    <h2 id={letter.toLowerCase()}>{letter}</h2>
+                    <dl class="glossary-list">
+                        {entries.map((entry) => (
+                            <GlossaryTerm entry={entry} />
+                        ))}
+                    </dl>
+                </section>
+            ))
+    }
+</StarlightPage>
+
+<style>
+    .glossary-list {
+        display: grid;
+        gap: 1.5rem;
+    }
+</style>
