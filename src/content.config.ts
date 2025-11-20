@@ -1,7 +1,7 @@
-import { defineCollection, z } from 'astro:content';
-import { docsLoader } from '@astrojs/starlight/loaders';
-import { docsSchema } from '@astrojs/starlight/schema';
-import { glob } from 'astro/loaders';
+import { defineCollection, z } from "astro:content";
+import { docsLoader } from "@astrojs/starlight/loaders";
+import { docsSchema } from "@astrojs/starlight/schema";
+import { glob } from "astro/loaders";
 
 const glossarySchema = z.object({
   term: z.string(),
@@ -14,8 +14,8 @@ export const collections = {
   docs: defineCollection({ loader: docsLoader(), schema: docsSchema() }),
   glossary: defineCollection({
     loader: glob({
-      base: './src/content/glossary',
-      pattern: '**/*.{md,mdx}',
+      base: "./src/content/glossary",
+      pattern: "**/*.{md,mdx}",
     }),
     schema: glossarySchema,
   }),
