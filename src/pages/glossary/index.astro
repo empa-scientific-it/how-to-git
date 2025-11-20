@@ -8,6 +8,31 @@ const sortedEntries = glossaryEntries.sort((a, b) =>
     a.data.term.localeCompare(b.data.term),
 );
 
+// Build a backlinks map
+const docEntries = await getCollection("docs");
+const TERM_PATTERN = /:term\[([^\]]+)\]/g;
+const backlinks = new Map<string, Array<{ title: string; path: string }>>();
+
+docEntries.forEach((entry) => {
+    if (!entry.body) return;
+    const seen = new Set<string>();
+    let match;
+
+    while ((match = TERM_PATTERN.exec(entry.body)) !== null) {
+        const term = match[1].toLowerCase();
+        if (seen.has(term)) continue;
+        seen.add(term);
+
+        if (!backlinks.has(term)) {
+            backlinks.set(term, []);
+        }
+        backlinks.get(term)!.push({
+            title: entry.data.title,
+            path: `/${entry.id}`,
+        });
+    }
+});
+
 // Group by first letter
 const grouped = sortedEntries.reduce(
     (acc, entry) => {
@@ -43,7 +68,10 @@ const grouped = sortedEntries.reduce(
                     <h2 id={letter.toLowerCase()}>{letter}</h2>
                     <dl class="glossary-list">
                         {entries.map((entry) => (
-                            <GlossaryTerm entry={entry} />
+                            <GlossaryTerm
+                                entry={entry}
+                                backlinks={backlinks.get(entry.id)}
+                            />
                         ))}
                     </dl>
                 </section>

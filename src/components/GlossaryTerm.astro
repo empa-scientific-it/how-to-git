@@ -3,9 +3,10 @@ import { type CollectionEntry, render } from "astro:content";
 
 interface Props {
     entry: CollectionEntry<"glossary">;
+    backlinks?: Array<{ title: string; path: string }>;
 }
 
-const { entry } = Astro.props;
+const { entry, backlinks = [] } = Astro.props;
 const { Content } = await render(entry);
 const hasBody = (entry.body?.trim().length ?? 0) > 0;
 const { term, definition, aliases, related } = entry.data;
@@ -26,15 +27,24 @@ const { term, definition, aliases, related } = entry.data;
 
         {
             related.length > 0 && (
-                <p class="see-also">
-                    Related:{" "}
-                    {related.map((slug, i) => (
-                        <>
-                            <a href={`#${slug}`}>{slug}</a>
-                            {i < related.length - 1 && ", "}
-                        </>
+                <div class="see-also">
+                    <span class="see-also-label">Related:</span>
+                    {related.map((slug) => (
+                        <a href={`#${slug}`}>{slug}</a>
                     ))}
-                </p>
+                </div>
+            )
+        }
+        {
+            backlinks.length > 0 && (
+                <div class="backlinks">
+                    <span class="backlinks-label">References:</span>
+                    <div class="backlinks-list">
+                        {backlinks.map((link) => (
+                            <a href={link.path}>{link.title}</a>
+                        ))}
+                    </div>
+                </div>
             )
         }
     </dd>
@@ -70,12 +80,54 @@ const { term, definition, aliases, related } = entry.data;
     }
 
     .see-also {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0.5rem;
         font-size: var(--sl-text-sm);
-        color: var(--sl-color-gray-3);
         margin: 0;
+    }
+
+    .see-also-label {
+        color: var(--sl-color-gray-3);
     }
 
     .see-also a {
         color: var(--sl-color-accent);
+        background-color: var(--sl-color-gray-5);
+        padding: 0.25rem 0.625rem;
+        border-radius: 0.25rem;
+        text-decoration: none;
+    }
+
+    .see-also a:hover {
+        background-color: var(--sl-color-gray-4);
+    }
+
+    .backlinks {
+        font-size: var(--sl-text-sm);
+        margin: 0;
+    }
+
+    .backlinks-label {
+        display: block;
+        color: var(--sl-color-gray-3);
+        margin-bottom: 0.25rem;
+    }
+
+    .backlinks-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .backlinks a {
+        color: var(--sl-color-accent);
+        text-decoration: none;
+        padding: 0.125rem 0;
+    }
+
+    .backlinks a:hover {
+        text-decoration: underline;
     }
 </style>
