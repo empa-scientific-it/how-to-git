@@ -15,6 +15,25 @@ export default defineConfig({
       title: "How To Git",
       description: "A guide to Git",
       plugins: [starlightThemeFlexoki()],
+      sidebar: [
+        { slug: "" },
+        {
+          label: "Guides",
+          autogenerate: { directory: "guides" },
+        },
+        {
+          label: "Tutorial",
+          autogenerate: { directory: "tutorial" },
+        },
+        {
+          label: "Glossary",
+          link: "/glossary",
+        },
+        {
+          label: "References",
+          link: "/references",
+        },
+      ],
     }),
   ],
 });
