@@ -1,0 +1,130 @@
+---
+import { getCollection } from 'astro:content';
+import MobileMenuFooter from 'virtual:starlight/components/MobileMenuFooter';
+import {
+  getCanonicalTopicSlug,
+  getPlatformFromSlug,
+  getPlatformLabel,
+  getTopicFromSlug,
+  normalizeDocSlug,
+  resolveDocHref,
+  resolveDocSlug,
+} from '../platforms';
+
+const { slug } = Astro.locals.starlightRoute;
+const is404Route = slug === '404' || slug.endsWith('/404');
+const docs = is404Route ? [] : await getCollection('docs');
+
+const activePlatform = getPlatformFromSlug(slug);
+const normalizedCurrentSlug = normalizeDocSlug(slug);
+const availableDocs = new Set(docs.map((entry) => normalizeDocSlug(entry.id)));
+
+const entries = is404Route
+  ? [{ title: 'Start Here', href: '/', isCurrent: false, order: 0, platform: 'github', slug: '' }]
+  : docs
+      .map((entry) => {
+        const normalizedSlug = normalizeDocSlug(entry.id);
+        const entryPlatform = getPlatformFromSlug(normalizedSlug);
+        const topic = getTopicFromSlug(normalizedSlug);
+
+        return {
+          title: entry.data.title,
+          order: entry.data.sidebar?.order ?? Number.MAX_SAFE_INTEGER,
+          platform: entryPlatform,
+          slug: normalizedSlug,
+          topic,
+        };
+      })
+      .filter((entry) => entry.platform === 'github')
+      .filter((entry) => entry.slug !== '404' && entry.topic !== '404')
+      .sort((left, right) => {
+        if (left.order !== right.order) {
+          return left.order - right.order;
+        }
+
+        return left.slug.localeCompare(right.slug);
+      })
+      .map((entry) => {
+        const resolvedSlug = resolveDocSlug(availableDocs, activePlatform, entry.topic);
+
+        return {
+          ...entry,
+          href: resolveDocHref(availableDocs, activePlatform, entry.topic),
+          isCurrent:
+            normalizedCurrentSlug === resolvedSlug ||
+            normalizeDocSlug(normalizedCurrentSlug) === getCanonicalTopicSlug(entry.topic),
+        };
+      });
+---
+
+<div class="platform-sidebar">
+  <!-- <p class="platform-sidebar-label">{getPlatformLabel(activePlatform)}</p> -->
+  <ul class="platform-sidebar-list">
+    {
+      entries.map((entry) => (
+        <li>
+          <a href={entry.href} aria-current={entry.isCurrent && 'page'}>
+            {entry.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<div class="md:sl-hidden">
+  <MobileMenuFooter />
+</div>
+
+<style>
+  @layer starlight.core {
+    .platform-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .platform-sidebar-label {
+      margin: 0;
+      font-size: var(--sl-text-xs);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sl-color-text-accent);
+    }
+
+    .platform-sidebar-list {
+      --sl-sidebar-item-padding-inline: 0.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .platform-sidebar-list li + li {
+      margin-top: 0.5rem;
+    }
+
+    .platform-sidebar-list a {
+      display: block;
+      border-radius: 0.25rem;
+      color: var(--sl-color-gray-2);
+      font-size: var(--sl-text-sm);
+      line-height: 1.4;
+      padding: 0.3em var(--sl-sidebar-item-padding-inline);
+      text-decoration: none;
+    }
+
+    .platform-sidebar-list a:hover,
+    .platform-sidebar-list a:focus {
+      color: var(--sl-color-white);
+    }
+
+    .platform-sidebar-list a[aria-current='page'],
+    .platform-sidebar-list a[aria-current='page']:hover,
+    .platform-sidebar-list a[aria-current='page']:focus {
+      font-weight: 600;
+      color: var(--sl-color-text-invert);
+      background-color: var(--sl-color-text-accent);
+    }
+  }
+</style>
