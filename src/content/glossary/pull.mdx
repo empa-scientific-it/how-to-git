@@ -1,0 +1,16 @@
+---
+term: Pull
+definition: Fetching the latest changes from GitHub and immediately merging them into your local branch.
+aliases: []
+related: [fetch, merge, branch]
+---
+
+A **pull** is a shortcut command that grabs the latest updates from GitHub and instantly mixes them into your local files. When you pull:
+
+- Git automatically runs a :term[fetch] to download the newest changes in the background
+- It immediately runs a :term[merge] to combine those changes into your active workspace
+- Your local project files are instantly updated to match what is on GitHub
+
+Pulling regularly is the best way to make sure you are always working on the most up-to-date version of a shared project.
+
+A pull can be stopped or aborted if you have unsaved local work that conflicts with the incoming changes. Git will pause and warn you, allowing you to save your work first rather than overwriting your changes.
