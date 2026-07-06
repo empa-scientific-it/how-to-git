@@ -3,11 +3,13 @@ import starlight from "@astrojs/starlight";
 import starlightThemeFlexoki from "starlight-theme-flexoki";
 import remarkGemoji from "remark-gemoji";
 import rehypeTargetBlank from "./src/plugins/rehype-target-blank.js";
+import remarkGlossaryDirective from "./src/plugins/remark-glossary-directive.js";
+import icon from "astro-icon";
 
 export default defineConfig({
   site: "https://how-to-git.netlify.app/",
   markdown: {
-    remarkPlugins: [remarkGemoji],
+    remarkPlugins: [remarkGemoji, remarkGlossaryDirective],
     rehypePlugins: [rehypeTargetBlank],
   },
   integrations: [
@@ -34,6 +36,8 @@ export default defineConfig({
           link: "/references",
         },
       ],
+      customCss: ["./src/styles/glossary.css"],
     }),
+    icon(),
   ],
 });
