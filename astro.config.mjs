@@ -18,16 +18,24 @@ export default defineConfig({
       description: "A guide to Git",
       plugins: [starlightThemeFlexoki()],
       sidebar: [
+        { slug: "" },
         {
-          label: "Documentation",
-          autogenerate: { directory: "documentation" },
+          label: "Guides",
+          autogenerate: { directory: "guides" },
+        },
+        {
+          label: "Tutorial",
+          autogenerate: { directory: "tutorial" },
         },
         {
           label: "Glossary",
           link: "/glossary",
         },
+        {
+          label: "References",
+          link: "/references",
+        },
       ],
-      customCss: ["./src/styles/glossary.css"],
     }),
     icon(),
   ],
