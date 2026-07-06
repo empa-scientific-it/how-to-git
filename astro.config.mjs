@@ -36,6 +36,7 @@ export default defineConfig({
           link: "/references",
         },
       ],
+      customCss: ["./src/styles/glossary.css"],
     }),
     icon(),
   ],
