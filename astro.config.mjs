@@ -15,6 +15,15 @@ export default defineConfig({
       title: "How To Git",
       description: "A guide to Git",
       plugins: [starlightThemeFlexoki()],
+      favicon: "/favicon.ico",
+      logo: {
+        src: "./src/assets/Logo_Cubeonly_Empa.svg",
+        alt: "Empa Scientific IT Logo",
+      },
+      customCss: [
+        "./src/styles/customColors.css",
+        "./src/styles/customStyles.css",
+      ],
     }),
   ],
 });
