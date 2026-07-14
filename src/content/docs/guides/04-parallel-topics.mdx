@@ -94,3 +94,19 @@ You can continue to work on your branch, and after every commit, the pull reques
 Once the work is done, you can merge the pull request by clicking on the green button that says "Merge pull request", "Squash and merge", or "Rebase and merge".
 Usually, you use Merge or Squash, more details on this topic can be found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges).
 This will merge your changes into the `main` branch and close the pull request.
+
+### Resolve conflicts
+
+Sometimes Git cannot merge two branches automatically.
+This happens when the same part of a file has been changed differently in both branches.
+Git will report a **merge conflict** and ask you to decide which changes to keep before the merge can be completed.
+Although conflicts may seem intimidating at first, they are a normal part of collaborative development.
+GitHub provides tools to help you resolve simple conflicts directly in the browser, while more complex conflicts can be resolved in your local editor.
+
+Before merging your branch into `main`, it is good practice to first bring the latest changes from `main` into your own branch.
+This helps you discover and resolve any conflicts before your changes are merged into the main codebase, making the final pull request easier to review and less likely to cause problems for others.
+The simplest way to do this is by merging `main` into your branch.
+
+Another common approach is **rebasing**, which moves your commits so they appear as if they were created on top of the latest version of `main`.
+Rebasing results in a cleaner, more linear project history, but because it rewrites commit history, it should be used with care, especially on branches that are shared with others.
+For most beginners, merging `main` into your branch is the recommended approach, while rebasing is a useful technique to learn as you become more familiar with Git.
