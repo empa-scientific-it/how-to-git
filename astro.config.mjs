@@ -18,6 +18,10 @@ export default defineConfig({
       description: "A guide to Git",
       plugins: [starlightThemeFlexoki()],
       favicon: "/favicon.ico",
+      social: [
+        { icon: "github", label: "GitHub", href: "https://github.com/empa-scientific-it/how-to-git" },
+        { icon: "seti:info", label: "Website", href: "https://scientificit.empa.ch/" },
+      ],
       logo: {
         src: "./src/assets/Logo_Cubeonly_Empa.svg",
         alt: "Empa Scientific IT Logo",
