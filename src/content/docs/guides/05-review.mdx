@@ -9,12 +9,12 @@ import { Aside } from '@astrojs/starlight/components';
 import CustomVideoPlayer from '@components/CustomVideoPlayer.astro';
 
 ### What are reviews good for? 
-When working together on a project, changes are usually made in branches and checked before merging into the main branch.
+When working together on a project, changes are usually made in branches and checked before merging into the main :trem[branch].
 Reviews let teammates give feedback, helping you see your work from a fresh perspective and improve it.
 Reviews are not just for code; they can also cover documentation, metadata files, or settings.
 They can even be set as required, to keep quality and consistency high.
-This way, no changes can be merged before review and approval.
-On GitHub, these reviews are commonly known as pull request (PR) reviews.
+This way, no changes can be merged before :term[review] and approval.
+On GitHub, these reviews are commonly known as :term[pull request] reviews.
 
 <Aside type="tip">
 Be friendly and specific while reviewing: Tell what needs to be changed and how, and give a reason if it is not clear.
@@ -22,14 +22,14 @@ Be friendly and specific while reviewing: Tell what needs to be changed and how,
 
 ### Request a review as an author
 A review should be requested, if the work on a topic has finished.
-Finishing the work on a topic means you wish to merge your branch to the main branch.
+Finishing the work on a topic means you wish to :term[merge] your branch to the main branch.
 To do this, you open a Pull Request (PR) and choose someone specific to review it.
 It is often best to choose a reviewer who was not directly involved in the development of this topic but is familiar with it.
 
-- First, open a [Pull Request](/guides/parallel-topics/#merge-branches).
+- First, open a [Pull Request](../parallel-topics/#merge-branches).
 - On the top right you can choose who to assign as a reviewer.
     ![Request reviewer](src/assets/request-reviewers.png)
-- Now you need to wait for the reviewer to finish the review.
+- Now you need to wait for the reviewer to finish the :term[review].
 - Lastly, if you realize that you have not finished working on your changes yet, you can convert your PR to a draft.
   This will make it clear to the reviewers that they should not start the review process yet.
 
@@ -52,17 +52,17 @@ As a reviewer you will receive a notification (depending on your settings) that 
 ### Handle change requests from reviewers
 When a reviewer requests changes, as an author you have several options.
 1. Accept them:
-    - If you agree with the feedback and comments, implement them in your branch and push the changes. The pull request will automatically be updated.
+    - If you agree with the feedback and comments, implement them in your branch and :term[push] the changes. The pull request will automatically be updated.
     - If the reviewer has made direct inline suggestions, you can apply the changes directly.
     ![Inline review suggestion](src/assets/review-inline-suggestion.png)
 2. Discuss further:
     - If you disagree with the feedback or believe the suggested changes are not necessary, you can respond to the reviewer by leaving a comment.
     - Once you have reached a compromise you can resolve the conversation.
-    - For larger or more complex suggestions that do not fit well within the current pull request, you can [create separate issues](/guides/plan-work) to track these improvements.
+    - For larger or more complex suggestions that do not fit well within the current pull request, you can [create separate issues](../plan-work) to track these improvements.
     This allows you to keep the current PR focused while still addressing the feedback.
-    - Once an issue is created, the person responsible can create a new branch specifically for addressing that issue, make the necessary changes, and submit a pull request, repeating the same process again.
+    - Once an :term[issue] is created, the person responsible can create a new branch specifically for addressing that issue, make the necessary changes, and submit a pull request, repeating the same process again.
 3. Close the PR:
-    - When the reviewing process is finished, and both author and reviewer are satisfied with the implemented changes, you can merge the pull request, as seen [here](/guides/parallel-topics/#merge-branches).
+    - When the reviewing process is finished, and both author and reviewer are satisfied with the implemented changes, you can merge the pull request, as seen [here](../parallel-topics/#merge-branches).
     - If at the end you realize, through the reviewing process, that the implemented changes are actually no longer needed, you can close the pull request without merging it. 
 
 <Aside type="tip">

@@ -10,22 +10,22 @@ import { Steps } from "@astrojs/starlight/components";
 ### Branching out topics
 
 Often, you will want to work on different topics in parallel and keep them separate from the main codebase.
-Those include the development of new features, bug fixes, or experiments.
-Git is offering the possibility of branching out.
-This is like working on isolated copies of your files, try out new things until everything works: in Git's terminology, this is called a :term[branch].
-Once you are satisfied with the changes, you can merge them back into the default branch, where the latest changes of the projects are reflected.
+Those topics include the development of new features, bug fixes, or experiments.
+Git lets you create separate lines of development called **branches**.
+You can think of a :term[branch] as an isolated copy of your project where you can experiment and develop without affecting the main version of your code.
+Once you are satisfied with the changes, you can :term[merge] them back into the default branch, where the latest changes of the projects are reflected.
 Usually, the default branch is called `main`; in the past it was often called `master`.
 When you want to work on a new feature or fix a bug, you create a new branch from the `main` branch.
-One should not hesitate to create branches, cause they are lightweight and simple to create and merge.
+This is the recommended best practice.
 
 To create a new branch, you can use the GitHub interface.
-There are different ways to create branches: from the repository in the dialogue window for a commit, from an issue, and a few more.
-Following the one from the repository is explained:
+There are different ways to create branches: from the repository's main page, from an :term[issue], and a few more.
+Here we will explain the way to do it from the repo's main page:
 
 <Steps>
-1. Go to your repository.
+1. Go to your :term[repository].
 
-2. Click on the "main" dropdown button.
+2. Click on the branch dropdown button. If it says "main" this means that you are branching out from the main branch.
 ![Branch dropdown example](src/assets/branch-dropdown.png)
 
 3. In the text field, type the name of your new branch (e.g., `feature-xyz`).
@@ -38,8 +38,9 @@ Now you've created a new branch, so you can start working on your new feature or
 If you are curious what it looks like in the commit history, you can always check the "Network" graph, described in the section [Check the history](../track-changes/#check-the-history).
 This will show you a graphical representation of your branches and commits.
 You will notice that the new branch is simply a pointer to a specific commit in the history.
-If the branch is freshly created, it will point to the same commit as the `main` branch, so the code in the new branch is still the same as in the `main` branch.
-However, as you make changes in the new branch, it will diverge from the `main` branch and will have parts that are different from the `main` branch.
+If the branch is freshly created, it will point to the same commit from the `main` branch where it was created from.
+This means that at this point, both branches have the same code.
+However, as you make changes in the new branch, it will diverge from the `main` branch.
 
 ### Switch between branched-out topics
 
@@ -48,17 +49,15 @@ To switch between branches, you can use the GitHub interface:
 <Steps>
 1. Go to your repository.
 
-2. Click on the "main" dropdown button right below the repository name.
+2. Click on the branch dropdown button right below the repository name.
    ![Branch dropdown example](src/assets/branch-dropdown.png)
 
-3. Select the branch for your topic of interest you want to switch to (e.g., `feature-xyz`).
+3. Select the branch you want to switch to (e.g., `feature-xyz`).
 </Steps>
 
-
 Once you switch to a branch, the files in your repository will be updated to reflect the state of that branch.
-Meaning, it can be that it looks different from before, since you changed files for new features or bug fixes.
 You can now make changes to the files.
-Once you commit them, they will be pushed, as in saved, to that branch that you chose from the drop-down in the beginning.
+Once you :term[commit] them, they will be pushed to that branch that you chose from the drop-down in the beginning.
 
 ### Merge branches
 
@@ -80,10 +79,10 @@ To do that, you can use the GitHub interface:
 
 5. Click on the green "Create pull request" button.
 
-6. In the newly opened page, you can add a title and a description for your pull request.
+6. In the newly opened page, you can add a title and a description for your :term[pull request].
    Later you will be able to find that pull request by that title.
-   This is a good place to explain what changes you made and why they are important.
-   Also, you can assign reviewers to your pull request, so they can review your changes and give feedback.
+   The description is where you can explain the changes that you have made and why they are important.
+   Also, you can assign reviewers to your pull request, so they can :term[review] your changes and give feedback.
 
 7. Once you are done, click on the green "Create pull request" button again.
 
@@ -92,5 +91,5 @@ To do that, you can use the GitHub interface:
 After that, your pull request will be created and you can see it in the "Pull requests" tab.
 You can continue to work on your branch, and after every commit, the pull request will be updated with the new changes.
 Once the work is done, you can merge the pull request by clicking on the green button that says "Merge pull request", "Squash and merge", or "Rebase and merge".
-Usually, you use Merge or Squash, more details on this topic can be found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges).
+Usually, you use Merge or Squash - more details on this topic can be found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges).
 This will merge your changes into the `main` branch and close the pull request.
