@@ -6,9 +6,12 @@ related: [branch, commit]
 
 **Checking out** changes your working directory so you can work on a different branch or view an older version of the project. When you checkout:
 
-- Git updates your files to match the selected branch or commit
-- Your previous work remains safely stored in its branch
+- Git updates your working directory to match the selected branch or commit
+- Your commits remain safely stored in their branch or commit history
 - You can move between branches whenever needed
-- Modern Git often uses git switch when changing branches
+- If you have uncommitted changes, Git will only let you switch if those changes won't be overwritten.
+Otherwise, Git will stop and ask you to either commit your changes, stash them, or discard them before switching.
 
-Older tutorials commonly use `git checkout`, while newer ones often recommend `git switch`.
+Older tutorials commonly use `git checkout` for changing branches.
+Newer versions of Git introduced `git switch`, which is dedicated to switching between branches and is generally easier for beginners to understand.
+However, `git checkout` is more versatile so you'll still encounter it frequently in existing documentation.
