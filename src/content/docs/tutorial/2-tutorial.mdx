@@ -1,0 +1,386 @@
+---
+title: Hands-On Tutorial
+description: A 2-hour collaborative tutorial using the GitHub web interface.
+---
+
+import { Steps, Aside } from "@astrojs/starlight/components";
+
+## Part 1: Explore the Repository
+
+Before making any changes, take a few minutes to familiarize yourself with the :term[repository].
+
+<Steps>
+
+1. **Open the repository.**
+   Do not forget to log in to your GitHub account, if prompted.
+
+2. **Read the README.**
+   Most repositories start with a `README.md` file displayed on the main page.
+   There the main purpose and structure of the project is explained.
+   Read it carefully.
+
+3. **Browse the files.**
+   Click on folders and files to explore what is already there.
+   Use the breadcrumb trail at the top to navigate back.
+
+4. **Check the existing branches.**
+   Click on the :term[branch] dropdown (it shows `main` by default) near the top-left of the file list.
+   This lists all branches in the repository.
+   The `main` branch contains the stable, reviewed version of the project.
+   At this point you will probably only see the `main` branch in this list.
+
+5. **Check the commit history.**
+   Under the green `<> Code` button you will see a :clock4: `Commits` link with a count.
+   Click it to see all commits.
+   Notice the author name, the :term[commit] message, and the timestamp.
+
+6. **View the network graph.**
+   Go to the `Insights` tab at the top of the repository, then click `Network` in the left sidebar.
+   This shows a visual timeline of all branches and commits.
+   At this point you will probably only see the `main` branch as a straight line.
+   Keep this view in mind as you will come back to it later to see how your branch fits in.
+
+</Steps>
+
+<Aside type="tip">
+Get used to browsing the repository this way.
+Before changing anything, it is always a good idea to understand what is already there.
+This will also help you become familiar with the GitHub web interface.
+</Aside>
+
+---
+
+## Part 2: Plan your Work and Create an Issue
+
+In a real project, work is always planned and tracked before any code or text is changed.
+GitHub **Issues** are the place to do that.
+You will now create an :term[issue] to describe the contribution you are going to make in this tutorial.
+
+<Aside type="note" title="What will you contribute?">
+The instructors will tell you what file to create and where.
+In this tutorial we are only going to work with text files.
+</Aside>
+
+<Steps>
+
+1. **Go to the Issues tab.**
+   Click on :radio_button: `Issues` in the top navigation of the repository.
+
+2. **Create a new issue.**
+   Click the green `New issue` button in the top-right corner.
+
+3. **Write a clear title.**
+   The title should describe *what* you plan to do.
+
+4. **Add a description.**
+   In the text area below, briefly explain *why* this change is needed.
+   You can use Markdown syntax to format text.
+
+5. **Assign yourself.**
+   On the right-hand side, click `Assignees` and select your own GitHub username.
+   Adding an :term[assignee] signals to the team that there is a person responsible for this task.
+
+6. **Add a label.**
+   Click `Labels` and select a relevant :term[label].
+   This helps with filtering and prioritizing issues.
+
+7. **Submit the issue.**
+   Click the green `Create` button.
+   You will be taken to the issue page.
+   Note the issue number (e.g., `#7`) shown next to the title - you will need it later.
+
+</Steps>
+
+<Aside type="tip">
+Keep the issue page open in a browser tab.
+In the next steps you will create a dedicated branch for this issue and you will link your pull request back to it.
+</Aside>
+
+---
+
+## Part 3: Create a Branch
+
+It is strongly recommended to never work directly on the `main` branch.
+Instead, it is best to create a **dedicated branch** for every change that you plan to make, so that your work stays isolated until it is ready to be reviewed and merged.
+
+You will now create a new branch to address the issue that you just created.
+The easiest way to create a branch that is automatically linked to your issue is to do it directly from the issue page.
+
+<Steps>
+
+1. **Go to your issue page.** You should still have it open from before.
+
+2. **Find the Development section.**
+   On the right-hand side panel, scroll down until you see the `Development` section.
+   Click `Create a branch`.
+
+3. **Choose a branch name.**
+   GitHub suggests a name based on the issue number and title, for example `7-issue-name`.
+   It is best to keep this name as it clearly links the branch to the issue.
+   You can of course shorten it if it is too long, but remember to keep the issue number at the start of the branch name.
+
+4. **Leave the other options at their defaults.**
+   - Repository destination: the shared repository
+   - Branch source: `main`
+
+5. **Click the green `Create branch` button.**
+   GitHub may show a dialog with `git` commands to checkout locally.
+   You can ignore this since for this tutorial we will only work in the browser.
+
+6. **Switch to your new branch.**
+   Go to the repository home page and click on the branch dropdown.
+   Select your new branch from the list and the page will reload showing your branch.
+   Notice the branch name is now shown in the dropdown, instead of `main`.
+
+</Steps>
+
+---
+
+## Part 4: Make a Change and Commit It
+
+Now that you are on your own branch, you can safely make changes without affecting anyone else's work.
+
+<Steps>
+
+1. **Navigate to the correct folder.**
+
+2. **Create a new file.**
+   Click the `Add file` button at the top-right area of the file list and select `Create new file`.
+
+3. **Name your file.**
+   In the filename field at the top, type the path to your file, followed by the file's name.
+
+4. **Write your content.**
+   In the editor, add a few lines.
+   This does not need to be perfect now, we will come back to edit the content later.
+
+5. **Commit your change.**
+   Click the `Commit changes...` button in the top-right.
+   A dialog box will appear.
+
+6. **Write a meaningful commit message.**
+   Replace the default message with something descriptive.
+   Optionally add an extended description if there is more context to provide.
+
+7. **Make sure the correct branch is selected.**
+   The dialog should show "Commit directly to the `7-your-branch` branch".
+   Do **not** select `main`.
+
+8. **Finish the commit.**
+   Click the `Commit changes` button.
+   Your file is now saved and tracked in your branch.
+
+</Steps>
+
+<Aside type="tip">
+Remember, every commit is a snapshot that you can return to at any time.
+</Aside>
+
+---
+
+## Part 5: Open a Pull Request
+
+A Pull Request, also known as PR, is a formal request to merge your branch into `main`.
+It is also the space where collaborators review your changes and give feedback.
+
+<Steps>
+
+1. **Start a new pull request.**
+   Go to the `Pull requests` tab.
+   Click the green `New pull request` button.
+
+2. **Select your branch.**
+   - `Base branch`: `main` (this is where your changes will be merged into)
+   - `Compare branch`: your branch (e.g., `7-your-branch`)
+
+   After selecting, GitHub will show you a diff — the exact changes you are proposing.
+
+3. **Start the pull request creation.**
+   Click the green `Create pull request` button.
+
+4. **Write a title and description.**
+   - The PR title should be concise and descriptive.
+   - In the description, explain what your PR does and why.
+   Then link it to your issue by adding a line like:
+   ```
+   Closes #7
+   ```
+   where you replace `7` with your actual issue number.
+   When the PR gets merged, GitHub will automatically close the linked issue.
+
+5. **Request a reviewer.**
+   On the right-hand side, click `Reviewers` and select a classmate to review your PR.
+   Ask the classmate sitting next to you - you will review each other's PRs.
+
+6. **Finish the pull request creation.**
+   Click the green `Create pull request` button.
+   Your PR is now open and your reviewer will be notified.
+
+</Steps>
+
+<Aside type="note" title="Draft pull requests">
+If you are not finished yet with your work, but still want to share your progress, you can open a **Draft Pull Request** by clicking the dropdown arrow next to the button for pull request creation and selecting `Create draft pull request`.
+A draft PR cannot be merged until it is marked as ready for review.
+</Aside>
+
+---
+
+## Part 6: Review a Pull Request
+
+While you wait for your reviewer to look at your PR, it is your turn to review the PR that your classmate has assigned to you.
+Reviewing is an essential skill - it helps catch problems early and improves the quality of the shared work.
+
+<Steps>
+
+1. **Find the PR assigned to you.**
+   Click on the tab `Pull requests` in the top navigation of the repository.
+   Look for the PR where your classmate has requested your review.
+   You may also have received a notification by email or on GitHub.
+
+2. **Read the description.**
+   Before looking at the code, read the PR description.
+   Understand what the author intended to change and why.
+   If there is an issue linked to the PR, read it to get more context.
+
+3. **Review the changes.**
+   Click on the `Files changed` tab to see the diff.
+   Lines in green (with a `+`) are additions; lines in red (with a `-`) are deletions.
+
+4. **Leave an inline comment.**
+   Hover over a line you want to comment on.
+   Click the blue :heavy_plus_sign: icon that appears to the left of the line.
+   You can also select multiple lines, if needed.
+   Type your comment in the box that appears.
+   It's best to click `Start a review`, instead of `Add single comment`, in case you want to add more comments before submitting the review.
+
+   <Aside type="tip">
+   Be specific and constructive: explain *what* should change and *why*, not just that something is wrong.
+   </Aside>
+
+5. **Make an inline suggestion.**
+   While writing a comment, click the `±` icon in the toolbar.
+   GitHub will insert the selected line(s) into a code block.
+   Edit those directly to propose a concrete change.
+   The author can then accept your suggestion with a single click.
+
+6. **Submit your review.**
+   When you have finished adding comments, click the green `Submit review` button at the top-right of the diff view page.
+   - Write a brief overall summary comment.
+   - Choose one of the three options:
+     - **Approve** - the PR looks good as is.
+     - **Comment** - you have feedback, but it is not blocking.
+     - **Request changes** - something must be fixed before this can be merged.
+   - Click the green `Submit review` button.
+
+</Steps>
+
+---
+
+## Part 7: Merge Your Pull Request
+
+Once your reviewer has approved your pull request, you can merge your branch into `main`.
+
+<Steps>
+
+1. **Open your pull request.**
+   Go to the `Pull requests` tab and click on your PR.
+
+2. **Check the review status.**
+   If your reviewer requested changes, address the feedback first:
+   - To accept an inline suggestion, click the green `Apply suggestion` button directly on the comment.
+   - To make other changes, go to your branch, edit the file, and commit again. The PR updates automatically.
+   - Once you have addressed everything, click the green `Re-request review` button to notify your reviewer.
+
+3. **Resolve conversations.**
+   After addressing feedback, mark each comment thread as `Resolved`.
+
+4. **Merge the pull request.**
+   When the PR is approved, click the green `Merge pull request` button.
+   Confirm by clicking `Confirm merge`.
+
+5. **Delete the branch.**
+   After merging, GitHub shows a button to `Delete branch`.
+   Click it, then the branch has served its purpose and can be deleted.
+
+6. **Check that your issue is closed.**
+   Go to the `Issues` tab.
+   Because you wrote `Closes #7` in the PR description, the issue should now be automatically closed.
+
+7. **View the network graph.**
+   Go to the `Insights > Network` tab again.
+   You will now see your branch joining the `main` line - a visual record of your contribution.
+
+</Steps>
+
+<Aside type="tip">
+Deleting the merged branch keeps the repository tidy.
+The full history of the commits is preserved in `main`, so nothing is lost.
+</Aside>
+
+---
+
+## Part 8: Resolve a Conflict
+
+A **merge conflict** occurs when two branches have changed the same part of the same file in different ways.
+Git cannot decide which version to keep automatically so it needs a human to choose.
+
+<Aside type="note" title="Setup">
+We will now introduce a conflict scenario.
+Two participants will have edited the **same lines** in the same file on **different branches**.
+When one branch is merged first, the second branch will have a conflict that must be resolved before it can also be merged.
+</Aside>
+
+### How a conflict happens
+
+Imagine two people both edit `README.md` on their respective branches:
+- **Branch A** changes the project title to `"Empa Git Workshop"`.
+- **Branch B** changes the same line to `"Empa GitHub Tutorial"`.
+
+When Branch A is merged first, Branch B now conflicts with `main`.
+
+### Resolve the conflict in the GitHub web interface
+
+<Steps>
+
+1. **Open the conflicting pull request.**
+   Go to the `Pull requests` tab and open the PR that shows a conflict.
+   You will see a warning banner: *"This branch has conflicts that must be resolved"*.
+
+2. **Click Resolve conflicts.**
+   GitHub will open an inline editor showing the conflict markers.
+
+3. **Understand the conflict markers.**
+   The file will look something like this:
+   ```
+   <<<<<<< your-branch
+   Empa GitHub Tutorial
+   =======
+   Empa Git Workshop
+   >>>>>>> main
+   ```
+   - Everything between `<<<<<<< your-branch` and `=======` is the version from **`your-branch`**.
+   - Everything between `=======` and `>>>>>>> main` is the version from **`main`**.
+
+4. **Choose the correct version.**
+   Edit the file directly in the browser:
+   - Delete the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`).
+   - Keep the text you want (either one version, the other, or a combination).
+
+   For example, after resolving:
+   ```
+   Empa Git Workshop & Tutorial
+   ```
+
+5. **Mark as resolved.**
+   Once you have edited all conflicts in the file, click the `Mark as resolved` button.
+   If there are conflicts in multiple files, repeat the process for each one.
+
+6. **Commit the merge.**
+   After all conflicts are resolved, click the green `Commit merge` button.
+   GitHub will create a special merge commit that records how the conflict was resolved.
+
+7. **Merge the pull request.**
+   The conflict warning is gone.
+   Click `Merge pull request` → `Confirm merge` to complete the process.
+
+</Steps>
