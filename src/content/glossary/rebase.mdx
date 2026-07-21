@@ -1,0 +1,15 @@
+---
+term: Rebase
+definition: An alternative way of combining changes from one branch into another by moving commits onto a new base.
+related: [merge, commit, branch]
+---
+
+A **rebase** rewrites the history of a branch so it appears as though your work started from a newer commit. Rebasing:
+
+- Creates a cleaner, more linear project history
+- Can make commit history easier to follow
+- Should be used carefully on branches shared with others
+- Is often used instead of merging before opening a pull request
+
+Although rebasing is a powerful Git feature, it is dangerous because it often is **not revertable**.
+For beginners it is recommended to use merges, which are safer, until they become more comfortable with Git.
