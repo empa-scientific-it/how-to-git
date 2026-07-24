@@ -5,10 +5,12 @@ sidebar:
   order: 3
 ---
 
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+
 ### Plan your work and record issues
 
 Before writing any text, it is important to plan what needs to be done.
-Git provides tools like **issues**, to help you organize your work collaboratively and also visually.
+Git provides tools like **Issues**, to help you organize your work collaboratively and also visually.
 
 So before starting, you can ask yourself and your team:
 - What tasks need to be completed?
@@ -24,8 +26,18 @@ You can comment, tag people, add labels, and so much more.
 
 ### Open your first issue
 
-On your :term[repository]'s main page, click on the Tab labeled :radio_button: `Issues`.
-Then, at the top-right corner, click on the green button labeled "New issue".
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    On your :term[repository]'s main page, click on the Tab labeled :radio_button: `Issues`.
+    Then, at the top-right corner, click on the green button labeled `New issue`.
+  </TabItem>
+  <TabItem label="GitLab">
+    Issues on GitLab are now called **Work items**.
+    On your repository's main page, under the section `Plan` on the left-hand side menu, you can select `Work items`.
+    Then, create a new issue with `New Item`.
+  </TabItem>
+</Tabs>
+
 In the newly opened page for issue creation, you are now asked to provide a title and a description for the issue.
 It is mandatory to give it a title, but even though the description is optional, it is strongly recommended to include one, as it will provide more detail.
 The description is in Markdown syntax, which allows you to format the text to make it more readable.
@@ -38,33 +50,58 @@ You can also add more than one.
 - You can add **labels** to your issues to categorize them (e.g., bug, feature, documentation, or even custom ones).
 Choosing an appropriate :term[label] can help in filtering and prioritizing issues.
 - You can link the issue to a **:term[milestone]** if it is part of a larger goal or release.
-- You can also link the issue to a **:term[project]** if you are using GitHub Projects to manage your work and visualize the progress in a Kanban-style board.
+- You can also link the issue to boards or planning views to further organize your work.
 
 All these features help in organizing and managing your work effectively.
 
 ### Relationships between issues
 It is also possible to link issues to each other, to provide parent-child relationships between tasks.
-After creating an issue, you can create **sub-issues** by clicking the "Create sub-issue" button underneath its description.
+
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    After creating an issue, you can create **sub-issues** by clicking the `Create sub-issue` button underneath its description.
+    ![Sub-issue example](src/assets/github/sub-issue.png)
+  </TabItem>
+  <TabItem label="GitLab">
+    After creating an issue, you can create **sub-issues** by using the `Child Items` section underneath its description.
+    ![Sub-issue example](src/assets/gitlab/sub-issue.png)
+  </TabItem>
+</Tabs>
+
 After doing so, you will see the list of sub-issues linked to that parent issue.
 You will also see the status of the sub-issues (open or closed), as well as a count of how many sub-issues there are in total and how many of them are closed.
-Lastly, in each sub-issue you will see a link underneath its title, pointing back to the parent issue.
-
-![Close issue button](src/assets/sub-issue.png)
+Lastly, in each sub-issue you will see a link, pointing back to the parent issue.
 
 Note that you can always **reference** other issues in the description or comments of an issue by using `#` followed by the issue number (e.g., `#5`).
 This will only create a link to that issue, but not a parent-child relationship.
 
-Lastly, have a look at the "Relationships" section on the right-hand side.
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    Lastly, have a look at the `Relationships` section on the right-hand side.
+    ![Issue relationships button](src/assets/github/issue-relationships.png)
+  </TabItem>
+  <TabItem label="GitLab">
+    Lastly, have a look at the `Linked Items` section underneath the issue description.
+    ![Issue relationships example](src/assets/gitlab/issue-relationships.png)
+  </TabItem>
+</Tabs>
+
 In that section, not only can you add parent relationships to other issues, but also mention **blocking** relationships.
 That is, if one issue cannot be started or completed until another issue is resolved, you can indicate that by adding a blocking relationship and specifying which issue is blocking which.
-
-![Close issue button](src/assets/issue-relationships.png)
 
 ### Closing issues
 Once a task is **completed**, you can close the relevant issue by clicking the button at the bottom of the issue page.
 It is always useful to add a **comment** before closing, summarizing what was done to resolve the issue.
 In the case that an issue is not going to be addressed, you can close it as **not planned**.
 Otherwise, if you notice that more than one issues try to address the same task, you can close one of them as a **duplicate** of the other.
-![Close issue button](src/assets/close-issue-button.png)
 
-Note that you can always **reopen a closed issue**, if you realize that it was not fully resolved, by clicking the "Reopen issue" button at the bottom of the page.
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    ![Close issue button](src/assets/github/close-issue-button.png)
+  </TabItem>
+  <TabItem label="GitLab">
+    ![Close issue button](src/assets/gitlab/close-issue-button.png)
+  </TabItem>
+</Tabs>
+
+Note that you can always **reopen a closed issue**, if you realize that it was not fully resolved, by clicking the `Reopen issue` button at the bottom of the page.

@@ -6,6 +6,7 @@ sidebar:
 ---
 
 import { Steps } from "@astrojs/starlight/components";
+import { Tabs, TabItem } from "@astrojs/starlight/components";
 
 ### Branching out topics
 
@@ -13,84 +14,136 @@ Often, you will want to work on different topics in parallel and keep them separ
 Those topics include the development of new features, bug fixes, or experiments.
 Git lets you create separate lines of development called **branches**.
 You can think of a :term[branch] as an isolated copy of your project where you can experiment and develop without affecting the main version of your code.
+
 Once you are satisfied with the changes, you can :term[merge] them back into the default branch, where the latest changes of the projects are reflected.
 Usually, the default branch is called `main`; in the past it was often called `master`.
+
 When you want to work on a new feature or fix a bug, you create a new branch from the `main` branch.
 This is the recommended best practice.
 
-To create a new branch, you can use the GitHub interface.
 There are different ways to create branches: from the repository's main page, from an :term[issue], and a few more.
 Here we will explain the way to do it from the repo's main page:
 
-<Steps>
-1. Go to your :term[repository].
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    <Steps>
+      1. Go to your :term[repository].
 
-2. Click on the branch dropdown button. If it says "main" this means that you are branching out from the main branch.
-![Branch dropdown example](src/assets/branch-dropdown.png)
+      2. Click on the  dropdown button. If it says `main` this means that you are branching out from the main branch.
+      ![Branch dropdown example](src/assets/github/branch-dropdown.png)
 
-3. In the text field, type the name of your new branch (e.g., `feature-xyz`).
+      3. In the text field, type the name of your new branch (e.g., `feature-xyz`).
 
-4. Press Enter to create the branch.
-</Steps>
+      4. Press Enter to create the branch.
+    </Steps>
+  </TabItem>
+  <TabItem label="GitLab">
+    <Steps>
+      1. Go to your :term[repository].
+
+      2. Click on the :heavy_plus_sign: dropdown button.
+      ![Branch dropdown menu](src/assets/gitlab/new-branch.png)
+
+      3. Select `New branch`.
+
+      4. Provide the name of the new branch and select where you want to branch out from.
+      ![Branch creation menu](src/assets/gitlab/new-branch-menu.png)
+    </Steps>
+  </TabItem>
+</Tabs>
 
 Now you've created a new branch, so you can start working on your new feature or bug fix.
 
-If you are curious what it looks like in the commit history, you can always check the "Network" graph, described in the section [Check the history](../track-changes/#check-the-history).
+If you are curious what it looks like in the commit history, you can always check the `Network` graph, described in the section [Check the history](../track-changes/#check-the-history).
 This will show you a graphical representation of your branches and commits.
 You will notice that the new branch is simply a pointer to a specific commit in the history.
-If the branch is freshly created, it will point to the same commit from the `main` branch where it was created from.
+If the branch is freshly created, it will point to the same commit from the parent branch where it was created from, in this example the `main` branch.
 This means that at this point, both branches have the same code.
-However, as you make changes in the new branch, it will diverge from the `main` branch.
+However, as you make changes in the new branch, it will diverge from the parent branch.
 
 ### Switch between branched-out topics
 
-To switch between branches, you can use the GitHub interface:
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    <Steps>
+    1. Go to your repository.
 
-<Steps>
-1. Go to your repository.
+    2. Click on the branch dropdown button right below the repository name.
+      ![Branch dropdown example](src/assets/github/branch-dropdown.png)
 
-2. Click on the branch dropdown button right below the repository name.
-   ![Branch dropdown example](src/assets/branch-dropdown.png)
+    3. Select the branch you want to switch to (e.g., `feature-xyz`).
+    </Steps>
+  </TabItem>
+  <TabItem label="GitLab">
+    <Steps>
+    1. Go to your repository.
 
-3. Select the branch you want to switch to (e.g., `feature-xyz`).
-</Steps>
+    2. Click on the branch dropdown button right below the repository name.
+      ![Branch dropdown example](src/assets/gitlab/branch-dropdown.png)
+
+    3. Select the branch you want to switch to (e.g., `feature-xyz`).
+    </Steps>
+  </TabItem>
+</Tabs>
 
 Once you switch to a branch, the files in your repository will be updated to reflect the state of that branch.
 You can now make changes to the files.
-Once you :term[commit] them, they will be pushed to that branch that you chose from the drop-down in the beginning.
+Once you :term[commit] them, they will be pushed to the branch that you chose from the drop-down in the beginning.
 
 ### Merge branches
 
-Once you are happy with your work done in a branch, you can merge it back into the `main` branch.
+Once you are happy with your work done in a branch, you can merge it back into another branch, in this example the `main` branch.
 This ensures that your changes are integrated into the main codebase, so they can be used by others.
-To do that, you can use the GitHub interface:
 
-<Steps>
-1. Go to your repository.
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    <Steps>
+      1. Go to your repository.
 
-2. Click on the "Pull requests" tab.
+      2. Click on the `Pull requests` tab.
 
-3. Click on the green "New pull request" button.
-   ![New pull request button example](src/assets/new-pull-request.png)
+      3. Click on the green `New pull request` button.
+        ![New pull request button example](src/assets/github/new-pull-request.png)
 
-4. Select the branch you want to merge from (e.g., `feature-xyz`) and the branch you want to merge into (e.g., `main`).
-   After that, you will see a comparison of the two branches and a list of commits that will be merged.
-   ![Create pull request example](src/assets/create-pull-request.png)
+      4. Select the branch you want to merge from (e.g., `feature-xyz`) and the branch you want to merge into (e.g., `main`).
+        After that, you will see a comparison of the two branches and a list of commits that will be merged.
+        ![Create pull request example](src/assets/github/create-pull-request.png)
 
-5. Click on the green "Create pull request" button.
+      5. Click on the green `Create pull request` button.
 
-6. In the newly opened page, you can add a title and a description for your :term[pull request].
-   Later you will be able to find that pull request by that title.
-   The description is where you can explain the changes that you have made and why they are important.
-   Also, you can assign reviewers to your pull request, so they can :term[review] your changes and give feedback.
+      6. In the newly opened page, you can add a title and a description for your :term[pull request].
+        Later you will be able to find that pull request by that title.
+        The description is where you can explain the changes that you have made and why they are important.
+        You can also assign reviewers to your pull request, so they can :term[review] your changes and give feedback.
 
-7. Once you are done, click on the green "Create pull request" button again.
+      7. Once you are done, click on the green `Create pull request` button again.
+    </Steps>
+  </TabItem>
+  <TabItem label="GitLab">
+    <Steps>
+      1. Go to your repository.
 
-</Steps>
+      2. Click on the `Merge requests` section on the left-hand side menu.
 
-After that, your pull request will be created and you can see it in the "Pull requests" tab.
+      3. Click on the `New merge request` button.
+
+      4. Select the branch you want to merge from (e.g., `feature-xyz`) and the branch you want to merge into (e.g., `main`).
+        Then click on the `Compare branches and continue` button.
+
+      5. In the newly opened page, you can add a title and a description for your merge request.
+        Later you will be able to find that merge request by that title.
+        The description is where you can explain the changes that you have made and why they are important.
+        You can also assign reviewers to your merge request, so they can review your changes and give feedback.
+        At the bottom of the page you will see a comparison of the two branches and a list of commits that will be merged.
+
+      6. Once you are done, confirm by creating the merge request.
+    </Steps>
+  </TabItem>
+</Tabs>
+
+After that, your pull request will be created and you can see it in the `Pull requests` tab.
 You can continue to work on your branch, and after every commit, the pull request will be updated with the new changes.
-Once the work is done, you can merge the pull request by clicking on the green button that says "Merge pull request", "Squash and merge", or "Rebase and merge".
+Once the work is done, you can merge the pull request by clicking on the green button that says `Merge pull request`, `Squash and merge`, or `Rebase and merge`.
 Usually, you use Merge or Squash - more details on this topic can be found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges).
 This will merge your changes into the `main` branch and close the pull request.
 
