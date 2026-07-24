@@ -16,10 +16,6 @@ export default defineConfig({
     starlight({
       title: "How To Git",
       description: "A guide to Git",
-      components: {
-        SiteTitle: "./src/components/PlatformSiteTitle.astro",
-        Sidebar: "./src/components/PlatformSidebar.astro",
-      },
       plugins: [starlightThemeFlexoki()],
       favicon: "/favicon.ico",
       social: [

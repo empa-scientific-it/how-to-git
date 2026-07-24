@@ -6,6 +6,7 @@ sidebar:
 ---
 
 import { Steps } from "@astrojs/starlight/components";
+import { Tabs, TabItem } from "@astrojs/starlight/components";
 
 ### What is a Git repository?
 
@@ -18,26 +19,52 @@ Further in the tutorial, we will learn how to use Git to manage a repository: tr
 To start the tutorial, we need to create a repository.
 The repository will serve as a place to store our text file.
 
-To create a repository, please go to your GitHub account, select the "Repositories" tab and click on the green "New" button.
-Alternatively, you can click on [this link](https://github.com/new).
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    To create a repository, please go to your GitHub account, select the `Repositories` tab and click on the green `New` button.
+    Alternatively, you can click on [this link](https://github.com/new).
+  </TabItem>
+  <TabItem label="GitLab">
+    In GitLab, the repository usually lives inside a **project**.
+    To create a repository, please go to your GitLab account and click on the button to create a new project.
+    The exact page layout may vary slightly, but the overall flow is the same.
+  </TabItem>
+</Tabs>
 
 In the newly opened page, please fill in the following fields:
 
-<Steps>
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    <Steps>
+      1. Set the **repository name** to `git-tutorial`
 
-1. Set the **repository name** to `git-tutorial`
+      2. Set the **description** to `Git tutorial` (optional)
 
-2. Set the **description** to `Git tutorial` (optional)
+      3. Make sure the **visibility** is set to _Public_ (default)
 
-3. Make sure the **visibility** is set to _Public_ (default)
+      4. Leave the rest of the options set to default
 
-4. Leave the rest of the options set to default
+      5. Click on the green button `Create repository`
+    </Steps>
+  </TabItem>
+  <TabItem label="GitLab">
+    <Steps>
+      1. Choose to create a **blank project**
 
-5. Click on the green button "Create repository"
+      2. Set the **project name** to `git-tutorial`
 
-</Steps>
+      3. Set the **description** to `Git tutorial` (optional)
 
-Congratulations, you have created your first GitHub repository!
+      4. Make sure the **visibility** is set to `Public` if you want to follow the tutorial with the simplest sharing settings inside the GitLab instance
+
+      5. Leave the rest of the options set to default
+
+      6. Click on the button to `Create project`
+    </Steps>
+  </TabItem>
+</Tabs>
+
+Congratulations, you have created your first repository!
 The repository is empty, so we need to add a file to it.
 
 ### Public vs Private repositories
@@ -52,20 +79,19 @@ This choice affects who can see the content of the repository and affects how yo
 
 - **Private repository**: Only you (the owner of the repository) and the people you invite can see the content of the repository.
   This is useful for personal projects or when you want to keep your work private.
-  You can still invite people to collaborate on the repository, but they will need to have a GitHub account and be granted access explicitly.
+  You can still invite people to collaborate on the repository, but they will need to have an account and be granted access explicitly.
 
 Setting the visibility of the repository is the initial step in controlling access to content and collaboration features.
 You can manage access to the repository in more detail using features, such as granting read or write access to specific people or teams.
 However, those details will be discussed later in the [Manage access to the repository](../collaborate/#manage-access-to-the-repository) section.
 
-
 ### Add a file to the repository
 
-To add a file to the repository, please click on the "uploading an existing file" link.
-In the newly opened page, please drag and drop a text file to the drag and drop area.
+To add a file to the repository you have the option to directly create a new file or upload an existing one.
+If you choose to upload an existing file then in the newly opened page you can either drag and drop a file or create one directly in the browser.
 You can create the file on your computer using any available text editor.
 The file can contain any text you want, but usually the programmers like to put "Hello, World!", so let's follow the tradition.
-The filename does not matter.
+The file name does not matter.
 
-Let's not modify any other fields and click the green "Commit changes" button.
+Let's not modify any other fields and commit the changes.
 Congratulations, you have added a file to the repository!
