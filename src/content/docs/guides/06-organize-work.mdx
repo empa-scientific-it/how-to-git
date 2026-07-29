@@ -28,48 +28,46 @@ There is also a more **automated way** to link branches to issues:
       1. Go to the page of the issue you want to work on.
 
       2. On the right-hand side menu you will find a link called `Create a branch`, under the `Development` section.
+      ![Create branch from issue](src/assets/github/create-issue-branch.png)
+
+      3. Clicking on this will open a dialog window where you can specify the name of the new branch.
+      By default, the branch name will be created by using the issue number and title.
+      You can modify the branch name, if needed, but it is recommended to keep at least the issue number in the branch name for clarity.
+      ![Dialog to create branch from issue](src/assets/github/issue-branch-dialog.png)
+
+      4. The option `Repository destination` points by default to the current :term[repository] you are working on.
+
+      5. You can leave the option `Branch source` set to `main`, unless you have a specific reason to start from a different branch.
+
+      6. Keep the option `Checkout locally` selected.
+
+      7. Click on the green button `Create branch`.
+
+      8. Close any additional dialog window that may appear.
+
+      9. [Switch to the new branch](../parallel-topics#switch-between-branched-out-topics) to start working on the issue.
     </Steps>
-
-    ![Create branch from issue](src/assets/github/create-issue-branch.png)
-
-    <Steps>
-      1. The option `Repository destination` points by default to the current :term[repository] you are working on.
-
-      2. You can leave the option `Branch source` set to `main`, unless you have a specific reason to start from a different branch.
-
-      3. Keep the option `:term[Checkout] locally` selected.
-
-      4. Click on the green button `Create branch`.
-
-      5. Close any additional dialog window that may appear.
-
-      6. [Switch to the new branch](../parallel-topics#switch-between-branched-out-topics) to start working on the issue.
-    </Steps>
-
-    ![Dialog to create branch from issue](src/assets/github/issue-branch-dialog.png)
   </TabItem>
   <TabItem label="GitLab">
     <Steps>
       1. Go to the page of the Work Item you want to work on.
 
       2. Look for the dropdown button that offers the option to create a branch from that issue.
-    </Steps>
+      ![Create branch from issue](src/assets/gitlab/create-issue-branch.png)
 
-    ![Create branch from issue](src/assets/gitlab/create-issue-branch.png)
+      3. Clicking on `Create branch` button will open a dialog window where you can specify the name of the new branch.
+      By default, the branch name will be created by using the issue number and title.
+      You can modify the branch name, if needed, but it is recommended to keep at least the issue number in the branch name for clarity.
+      ![Dialog to create branch from issue](src/assets/gitlab/issue-branch-dialog.png)
 
-    <Steps>
-      1. You can leave the option `Branch source` set to `main`, unless you have a specific reason to start from a different branch.
+      4. You can leave the option `Source` set to `main`, unless you have a specific reason to start from a different branch.
 
-      2. You can edit the suggested branch name, if needed.
+      5. Click on the blue button `Create branch`.
+
+      6. [Switch to the new branch](../parallel-topics#switch-between-branched-out-topics) to start working on the work item.
     </Steps>
   </TabItem>
 </Tabs>
-
-Clicking this button will open a dialog window where you can specify the name of the new branch.
-By default, the branch name will be created by using the issue number and title.
-You can modify the branch name, if needed, but it is recommended to keep at least the issue number in the branch name for clarity.
-
-
 
 ### Closing an issue with a branch
 
