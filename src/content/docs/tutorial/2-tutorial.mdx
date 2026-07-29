@@ -5,7 +5,7 @@ description: A 2-hour collaborative tutorial using the GitHub web interface.
 
 import { Steps, Aside } from "@astrojs/starlight/components";
 
-## Part 1: Explore the Repository
+## 1. Explore the Repository
 
 Before making any changes, take a few minutes to familiarize yourself with the :term[repository].
 
@@ -50,7 +50,7 @@ This will also help you become familiar with the GitHub web interface.
 
 ---
 
-## Part 2: Plan your Work and Create an Issue
+## 2. Plan your Work and Create an Issue
 
 In a real project, work is always planned and tracked before any code or text is changed.
 GitHub **Issues** are the place to do that.
@@ -98,7 +98,7 @@ In the next steps you will create a dedicated branch for this issue and you will
 
 ---
 
-## Part 3: Create a Branch
+## 3. Create a Branch
 
 It is strongly recommended to never work directly on the `main` branch.
 Instead, it is best to create a **dedicated branch** for every change that you plan to make, so that your work stays isolated until it is ready to be reviewed and merged.
@@ -136,7 +136,7 @@ The easiest way to create a branch that is automatically linked to your issue is
 
 ---
 
-## Part 4: Make a Change and Commit It
+## 4. Make a Change and Commit It
 
 Now that you are on your own branch, you can safely make changes without affecting anyone else's work.
 
@@ -173,12 +173,13 @@ Now that you are on your own branch, you can safely make changes without affecti
 </Steps>
 
 <Aside type="tip">
-Remember, every commit is a snapshot that you can return to at any time.
+Remember, every commit is also a snapshot that you can return to at any time.
+Clicking on a commit brings you to the state of the repository where all changes up to the selected commit are applied.
 </Aside>
 
 ---
 
-## Part 5: Open a Pull Request
+## 5. Open a Pull Request
 
 A Pull Request, also known as PR, is a formal request to merge your branch into `main`.
 It is also the space where collaborators review your changes and give feedback.
@@ -225,20 +226,22 @@ A draft PR cannot be merged until it is marked as ready for review.
 
 ---
 
-## Part 6: Review a Pull Request
+## 6. Review a Pull Request
 
-While you wait for your reviewer to look at your PR, it is your turn to review the PR that your classmate has assigned to you.
+While you wait for your reviewer to look at your PR, it is your turn to review a PR.
+Maybe a classmate has already assigned one to you.
 Reviewing is an essential skill - it helps catch problems early and improves the quality of the shared work.
 
 <Steps>
 
-1. **Find the PR assigned to you.**
+1. **Find a PR to review.**
    Click on the tab `Pull requests` in the top navigation of the repository.
-   Look for the PR where your classmate has requested your review.
-   You may also have received a notification by email or on GitHub.
+   Look for a PR where a classmate has requested your review.
+   Otherwise, pick one that has not been reviewed yet.
 
 2. **Read the description.**
-   Before looking at the code, read the PR description.
+   Before looking at the code, read the top comment, written by the creator of the PR.
+   You can find it under the tab `Conversation`.
    Understand what the author intended to change and why.
    If there is an issue linked to the PR, read it to get more context.
 
@@ -276,9 +279,14 @@ Reviewing is an essential skill - it helps catch problems early and improves the
 
 ---
 
-## Part 7: Merge Your Pull Request
+## 7. Merge Your Pull Request
 
 Once your reviewer has approved your pull request, you can merge your branch into `main`.
+
+<Aside type="note">
+For safety reasons, **approval from the repository maintainers is required**.
+The merge button will only be activated once one of the instructors has approved the PR.
+</Aside>
 
 <Steps>
 
@@ -319,14 +327,14 @@ The full history of the commits is preserved in `main`, so nothing is lost.
 
 ---
 
-## Part 8: Resolve a Conflict
+## 8. Resolve a Conflict
 
 A **merge conflict** occurs when two branches have changed the same part of the same file in different ways.
 Git cannot decide which version to keep automatically so it needs a human to choose.
 
 <Aside type="note" title="Setup">
-We will now introduce a conflict scenario.
-Two participants will have edited the **same lines** in the same file on **different branches**.
+We will now introduce a conflict scenario by adding a `CONTRIBUTORS.md` file.
+Participants will have edited the **same lines** in the same file on **different branches**.
 When one branch is merged first, the second branch will have a conflict that must be resolved before it can also be merged.
 </Aside>
 
@@ -381,6 +389,6 @@ When Branch A is merged first, Branch B now conflicts with `main`.
 
 7. **Merge the pull request.**
    The conflict warning is gone.
-   Click `Merge pull request` → `Confirm merge` to complete the process.
+   Click `Merge pull request` > `Confirm merge` to complete the process.
 
 </Steps>
