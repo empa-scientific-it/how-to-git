@@ -57,7 +57,7 @@ Now you've created a new branch, so you can start working on your new feature or
 If you are curious what it looks like in the commit history, you can always check the `Network` graph, described in the section [Check the history](../track-changes/#check-the-history).
 This will show you a graphical representation of your branches and commits.
 You will notice that the new branch is simply a pointer to a specific commit in the history.
-If the branch is freshly created, it will point to the same commit from the parent branch where it was created from, in this example the `main` branch.
+If the branch is freshly created, it will point to the same commit from the parent branch it was created from, in this example the `main` branch.
 This means that at this point, both branches have the same code.
 However, as you make changes in the new branch, it will diverge from the parent branch.
 
@@ -105,7 +105,7 @@ This ensures that your changes are integrated into the main codebase, so they ca
       3. Click on the green `New pull request` button.
         ![New pull request button example](src/assets/github/new-pull-request.png)
 
-      4. Select the branch you want to merge from (e.g., `feature-xyz`) and the branch you want to merge into (e.g., `main`).
+      4. Select the branch you want to merge into (e.g., `main`) and the branch you want to merge from (e.g., `feature-xyz`).
         After that, you will see a comparison of the two branches and a list of commits that will be merged.
         ![Create pull request example](src/assets/github/create-pull-request.png)
 
