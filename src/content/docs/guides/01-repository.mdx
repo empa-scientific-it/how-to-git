@@ -5,40 +5,70 @@ sidebar:
   order: 1
 ---
 
+import { Aside } from "@astrojs/starlight/components";
 import { Steps } from "@astrojs/starlight/components";
+import { Tabs, TabItem } from "@astrojs/starlight/components";
 
 ### What is a Git repository?
 
 A Git :term[repository] is a folder that contains all the files and folders related to a project.
 Beyond that, it also contains the history of all changes made to them.
-Further in the tutorial, we will learn how to use Git to manage a repository: track changes, work on different topics in parallel, and collaborate with others, and more.
+Further in the tutorial, we will learn how to use Git to manage a repository: track changes, work on different topics in parallel, collaborate with others, and more.
 
 ### Create a repository
 
-To start the tutorial, we need to create a repository.
-The repository will serve as a place to store our text file.
+The first thing you do with Git is to create a repository.
+The repository serves as a place to store files.
 
-To create a repository, please go to your GitHub account, select the "Repositories" tab and click on the green "New" button.
-Alternatively, you can click on [this link](https://github.com/new).
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    To create a repository, please go to your GitHub account, select the `Repositories` tab and click on the green `New` button.
+    Alternatively, you can click on [this link](https://github.com/new).
+  </TabItem>
+  <TabItem label="GitLab">
+    In GitLab, the repository usually lives inside a **project**.
+    To create a repository, please go to GitLab home page and on the left-hand side menu click on `Projects`.
+    Then, click the blue `New project` button.
+    Alternatively, you can click on [this link](https://gitlab.empa.ch/projects/new).
+  </TabItem>
+</Tabs>
 
 In the newly opened page, please fill in the following fields:
 
-<Steps>
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    <Steps>
+      1. Set the **repository name**
 
-1. Set the **repository name** to `git-tutorial`
+      2. Set the **description** (optional)
 
-2. Set the **description** to `Git tutorial` (optional)
+      3. Set the **visibility** (_Public_ by default)
 
-3. Make sure the **visibility** is set to _Public_ (default)
+      4. Leave the rest of the options set to default
 
-4. Leave the rest of the options set to default
+      5. Click on the button `Create repository`
+    </Steps>
+  </TabItem>
+  <TabItem label="GitLab">
+    <Steps>
+      1. Choose to create a **blank project**
 
-5. Click on the green button "Create repository"
+      2. Set the **project name**
 
-</Steps>
+      3. From the dropdown under **project URL** select your username to create a personal project
 
-Congratulations, you have created your first GitHub repository!
-The repository is empty, so we need to add a file to it.
+      4. Edit the **project slug** if needed
+
+      5. Set the **visibility** (_Internal_ by default)
+
+      6. Leave the rest of the options set to default
+
+      7. Click on the button to `Create project`
+    </Steps>
+  </TabItem>
+</Tabs>
+
+Congratulations, you have created your first repository!
 
 ### Public vs Private repositories
 
@@ -47,25 +77,61 @@ This choice affects who can see the content of the repository and affects how yo
 
 - **Public repository**: Anyone can see the content of the repository.
   This is useful for open-source projects or when you want to share your work with the world.
-  The repository can be forked, which means that anyone can create a copy of the repository and work on it independently.
+  The repository can be :term[fork]ed, which means that anyone can create a copy of the repository and work on it independently.
   People can also report issues, suggest changes, and contribute to the project.
 
 - **Private repository**: Only you (the owner of the repository) and the people you invite can see the content of the repository.
   This is useful for personal projects or when you want to keep your work private.
-  You can still invite people to collaborate on the repository, but they will need to have a GitHub account and be granted access explicitly.
+  You can still invite people to collaborate on the repository, but they will need to have an account and be granted access explicitly.
 
 Setting the visibility of the repository is the initial step in controlling access to content and collaboration features.
 You can manage access to the repository in more detail using features, such as granting read or write access to specific people or teams.
 However, those details will be discussed later in the [Manage access to the repository](../collaborate/#manage-access-to-the-repository) section.
 
+#### Internal repositories
+
+**GitLab** offers the possibility to create **Internal** repositories.
+
+This means that only people working at Empa can see the content of the repository, as long as they are logged in to their GitLab account.
+This is useful for internal projects that are not meant to be accessed by external users.
+You can still invite external people to collaborate on the repository, but they will need to be granted access explicitly and allowed to create an Empa GitLab account.
 
 ### Add a file to the repository
 
-To add a file to the repository, please click on the "uploading an existing file" link.
-In the newly opened page, please drag and drop a text file to the drag and drop area.
-You can create the file on your computer using any available text editor.
-The file can contain any text you want, but usually the programmers like to put "Hello, World!", so let's follow the tradition.
-The filename does not matter.
+To add a file to the repository you have the option to directly create a new file or upload an existing one.
+You can do that from the repository's main page:
 
-Let's not modify any other fields and click the green "Commit changes" button.
-Congratulations, you have added a file to the repository!
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    Click on the `Add file` dropdown button.
+    ![Add file menu](src/assets/github/add-file.png)
+  </TabItem>
+  <TabItem label="GitLab">
+    Click on the :heavy_plus_sign: dropdown button.
+    ![Add file menu](src/assets/gitlab/new-branch.png)
+  </TabItem>
+</Tabs>
+
+If you choose to upload an existing file then in the newly opened page you can drag and drop any file you wish.
+
+Instead, if you choose to create a new file, this will lead you to a new window:
+
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    ![Add file menu](src/assets/github/create-file.png)
+  </TabItem>
+  <TabItem label="GitLab">
+    ![Add file menu](src/assets/gitlab/create-file.png)
+  </TabItem>
+</Tabs>
+
+Give your file a name and do not forget to add the file extention as well.
+Once you are done writing the content, click on the `Commit changes` button.
+
+<Aside type="note">
+  You need to ensure that you are creating the file in the correct folder and the correct branch.
+  We will discuss branches in more detail [later on](../parallel-topics).
+  Since this may seem complicated for now, it is recommended to start by uploading existing files.
+  For now, applying all changes to the branch called `main` is sufficient.
+  Soon, we will explore more advanced practices.
+</Aside>
