@@ -5,26 +5,25 @@ sidebar:
   order: 7
 ---
 
+import { Steps } from "@astrojs/starlight/components";
 import { Tabs, TabItem } from "@astrojs/starlight/components";
+
+The fact that a :term[repository] can be private or public already influences its basic access management, as discussed in the [Public vs Private repositories](../repository/#public-vs-private-repositories) section.
+However, there are advanced features that allow you to manage access to the repository in more detail.
 
 <Tabs syncKey="option">
   <TabItem label="GitHub">
     ### Manage access to the repository
-
-    The fact that a :term[repository] can be private or public already influences its basic access management, as discussed in the [Public vs Private repositories](../repository/#public-vs-private-repositories) section.
-    However, there are advanced features that allow you to manage access to the repository in more detail.
-
     A GitHub repository can belong either to an individual user or to a GitHub organization (a group of users):
     - If the repository belongs to an individual, that user is the owner and has full administrative control.
     - If the repository belongs to a GitHub organization, then the organization owners are the admins of all repositories within the organization.
 
-    We will focus on the privately owned repositories.
-    To invite collaborators to a privately owned repository, you can open the repository on GitHub, click on the `Settings` tab, and then select `Collaborators` from the left sidebar.
+    To invite collaborators to a **privately owned repository**, you can open the repository on GitHub, click on the `Settings` tab, and then select `Collaborators` from the left sidebar.
     There, you can find the `Manage access` section, where you can invite collaborators by their GitHub username.
     When you invite a collaborator, they will receive an email notification and will need to accept the invitation to gain access to the repository.
     After the invitation is accepted, the new collaborator will be assigned a `collaborator role` with write access to the repository.
 
-    The situation is a bit different for repositories that belong to an organization.
+    The situation is a bit different for **repositories that belong to an organization**.
     First, an organization can have two types of membership: `owners` and `members`.
     At the same time, the repositories within the organization can have separate access control.
     To invite people to a repository that belongs to an organization, you can click on the `Settings` tab of the repository, then select `Collaborators and teams` from the left sidebar, and then click on the `Add people` button.
@@ -40,48 +39,72 @@ import { Tabs, TabItem } from "@astrojs/starlight/components";
     - The `Admin` role gives you full control over the repository, including managing access and deleting the repository.
 
     After the invitation is accepted, the new collaborator will also be listed as an outside collaborator in the `People` section.
-
-    ### Report problems and give suggestions
-
-    As a collaborator, if you find a problem or have a suggestion for improvement, you can create an :term[issue] in the repository.
-    This is a great way to communicate with other contributors and help improve the project.
-    The process for creating an issue is the same as described in [this guide](../plan-work).
   </TabItem>
   <TabItem label="GitLab">
     ### Manage access to the repository
-
-    The fact that a repository can be private or public already influences its basic access management, as discussed in the [Public vs Private repositories](../repository/#public-vs-private-repositories) section, so we will not repeat it here.
-    However, there are advanced features that allow you to manage access to the repository in more detail.
-
     A GitLab repository can belong either to an individual user namespace or to a group.
-
     - If the repository belongs to an individual namespace, that user has administrative control.
-
     - If the repository belongs to a group, then group owners or maintainers may be able to manage access depending on the configuration.
 
-    We will focus on privately managed repositories.
-    To invite collaborators, you can open the project on GitLab, go `Manage` > `Members` on the left-hand side menu, and invite collaborators by their GitLab username or email.
+    To invite collaborators to a **privately owned repository**, you can open the project on GitLab, go `Manage` > `Members` on the left-hand side menu, and invite collaborators by their GitLab username or email.
     When you invite a collaborator, they will receive a notification and will need to accept the invitation to gain access to the repository.
     After the invitation is accepted, the new collaborator will be assigned a role in the project.
 
-    The situation is a bit different for repositories that belong to a group.
-    At the same time, the repositories within the group can have separate access control.
+    The situation is a bit different for **repositories that belong to a group**.
+    The repositories within the group can have separate access control.
     To invite people to a repository that belongs to a group, you can open the project's member management section and add the person you want to invite.
     After selecting the person, you can assign them a role for the repository and confirm the invitation.
+    The role can be one of the following: `Guest`, `Reporter`, `Developer`, `Maintainer`, or `Owner`.
 
-    - **Guest**: can view basic project information.
-    - **Reporter**: can read the project and follow progress.
-    - **Developer**: can push changes to the repository and work with branches and merge requests.
-    - **Maintainer**: can manage project settings and collaboration more broadly.
-    - At the group level, there is also an **Owner** role.
+    - The `Guest` role allows users to view basic project information.
+    - The `Reporter` role allows users to read the project and follow progress.
+    - The `Developer` role allows users to push changes to the repository and work with branches and merge requests.
+    - The `Maintainer` role allows users to manage project settings and collaboration more broadly.
+    - At the group level, there is also an `Owner` role.
 
     In practice, the smallest useful role depends on what the collaborator needs to do.
     For example, a reporter can read and follow the work, while a developer can contribute code.
     Choosing the smallest role that still allows the person to do their work is usually a good idea.
-
-    ### Report problems and give suggestions
-
-    The easiest way to report a problem or suggest an improvement is through an issue.
-    That keeps the discussion attached to the project and visible to everyone involved.
   </TabItem>
 </Tabs>
+
+### Collaborate on public or open-source software repositories
+
+When you want to contribute to a public repository that you do not have write access to, the standard approach is to use a :term[fork].
+A fork is a personal copy of someone else's repository that lives under your own account.
+Because you own the fork, you can freely experiment, fix bugs, or add features without affecting the original project.
+Once your changes are ready, you can propose them back to the original repository by opening a :term[pull request].
+
+#### Forking a repository
+
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    <Steps>
+      1. To fork a repository on GitHub, navigate to the repository you want to contribute to and click the `Fork` button in the top-right corner.    
+        ![Fork button](src/assets/github/fork-button.png)
+
+      2. GitHub will create a copy of the repository under your own account.
+        Before confirming the fork creation you may edit the name and description of the fork, but it is recommended to keep the original.
+        Unless you want your fork to include the rest of the original repository's branches, it is best to copy the `main` branch only.
+        ![Fork page](src/assets/github/create-fork.png)
+    </Steps>
+  </TabItem>
+  <TabItem label="GitLab">
+    <Steps>
+      1. To fork a repository on GitLab, navigate to the project you want to contribute to and click the `Fork` button near the top of the page.
+        ![Fork button](src/assets/gitlab/fork-button.png)
+
+      2. Before confirming the fork creation you may edit the name, slug, and description of the fork, but it is recommended to keep the original.
+        Gitlab will also ask you to choose a namespace under `Project URL`, which can be your personal namespace or a group you belong to.
+        Unless you want your fork to include the rest of the original repository's branches, it is best to copy the `main` branch only.
+        Lastly, select the visibility level.
+        ![Fork page](src/assets/gitlab/create-fork.png)
+    </Steps>
+  </TabItem>
+</Tabs>
+
+### Report problems and give suggestions
+
+As a collaborator, if you find a problem or have a suggestion for improvement, you can create an :term[issue] in the repository.
+This is a great way to communicate with other contributors and help improve the project.
+The process for creating an issue is the same as described in [this guide](../plan-work).
