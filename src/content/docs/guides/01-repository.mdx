@@ -110,6 +110,15 @@ You can do that from the repository's main page:
     Click on the :heavy_plus_sign: dropdown button.
     ![Add file menu](src/assets/gitlab/new-branch.png)
   </TabItem>
+  <TabItem label="Local / CLI">
+    If you have a [local copy of the repository](../cli-setup), create or edit the file with **any** editor, then use the CLI to commit and push it:
+
+    ```bash
+    git add <file-path>
+    git commit -m "Add <file-path>"
+    git push
+    ```
+  </TabItem>
 </Tabs>
 
 If you choose to upload an existing file then in the newly opened page you can drag and drop any file you wish.

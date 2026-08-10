@@ -14,6 +14,10 @@ File changes can be made either directly in the web browser or locally on your c
 Working locally is useful if you prefer working in your familiar development environment, especially when writing and running code.
 In this tutorial, we will start with editing a text file using the web browser, so you won't need to write any code - you can simply use the appropriate buttons.
 
+<Aside type="tip">
+  Working locally follows the same idea, with commands instead of buttons: edit a file, check what changed with `git status` and `git diff`, then stage and commit it with `git add <file-path>` and `git commit -m "..."` - see [Add a file to the repository](../repository/#add-a-file-to-the-repository) for the full loop, including `git push`.
+</Aside>
+
 ### Change files
 To modify a file in the web browser, start by opening the :term[repository] and clicking on the file you have added.
 At the top-right corner you will see an edit button.
@@ -74,5 +78,28 @@ In Git, you can view all kinds of changes - whether for a single file, the entir
     You can view the history of commits for another branch by selecting one from the branch dropdown button at the top-left corner of the page.
 
     3. There is the possibility to see a **more detailed view of the repository's history** by clicking `Repository graph` under `Code` at the left-hand side menu.
+  </TabItem>
+  <TabItem label="Local / CLI">
+    To check the **history of a file**:
+
+    ```bash
+    git log <file-path>
+    ```
+
+    Each entry shows the commit message, author, and SHA - the unique identifier for that commit.
+
+    ![git log output with the commit SHA highlighted](src/assets/cli/commit-sha.png)
+
+    To check the **history of the current branch**, including a graphical view of how branches diverged and merged:
+
+    ```bash
+    git log --oneline --graph --all
+    ```
+
+    To see the exact changes made in a specific commit copy the corresponding sha (e.g. from the command above):
+
+    ```bash
+    git show <sha>
+    ```
   </TabItem>
 </Tabs>

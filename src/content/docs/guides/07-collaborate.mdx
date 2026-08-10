@@ -103,6 +103,15 @@ Once your changes are ready, you can propose them back to the original repositor
   </TabItem>
 </Tabs>
 
+Once you have a fork, clone it as described in [Work with Git locally](../cli-setup) to work on it from your machine.
+It's also common to add the original repository as a second remote, usually called `upstream`, so you can pull in its future changes:
+
+```bash
+git remote add upstream <original-url>
+git fetch upstream
+git merge upstream/main
+```
+
 ### Report problems and give suggestions
 
 As a collaborator, if you find a problem or have a suggestion for improvement, you can create an :term[issue] in the repository.

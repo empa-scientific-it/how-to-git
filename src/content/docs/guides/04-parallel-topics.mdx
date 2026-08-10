@@ -5,6 +5,7 @@ sidebar:
   order: 4
 ---
 
+import { Aside } from "@astrojs/starlight/components";
 import { Steps } from "@astrojs/starlight/components";
 import { Tabs, TabItem } from "@astrojs/starlight/components";
 
@@ -51,6 +52,14 @@ Here we will explain the way to do it from the repo's main page:
       ![Branch creation menu](src/assets/gitlab/new-branch-menu.png)
     </Steps>
   </TabItem>
+  <TabItem label="Local / CLI">
+    ```bash
+    git switch -c feature-xyz
+    ```
+
+    This creates `feature-xyz` from your current branch and switches to it in one step.
+    You may also see `git checkout -b feature-xyz`, the older equivalent - see :term[checkout] for the difference.
+  </TabItem>
 </Tabs>
 
 Now you've created a new branch, so you can start working on your new feature or bug fix.
@@ -84,6 +93,13 @@ However, as you make changes in the new branch, it will diverge from the parent 
 
     3. Select the branch you want to switch to (e.g., `feature-xyz`).
     </Steps>
+  </TabItem>
+  <TabItem label="Local / CLI">
+    ```bash
+    git switch feature-xyz
+    ```
+
+    You may also see `git checkout feature-xyz`, the older equivalent - see :term[checkout] for the difference.
   </TabItem>
 </Tabs>
 
@@ -140,6 +156,16 @@ This ensures that your changes are integrated into the main codebase, so they ca
       6. Once you are done, confirm by creating the merge request.
     </Steps>
   </TabItem>
+  <TabItem label="Local / CLI">
+    Opening a pull/merge request on the web is still the recommended way to merge, since it gives your team a chance to review the changes first.
+    For completeness, here is the raw local merge:
+
+    ```bash
+    git switch main
+    git merge feature-xyz
+    git push
+    ```
+  </TabItem>
 </Tabs>
 
 After that, your pull request will be created and you can see it in the `Pull requests` tab.
@@ -159,6 +185,20 @@ GitHub provides tools to help you resolve simple conflicts directly in the brows
 Before merging your branch into `main`, it is good practice to first bring the latest changes from `main` into your own branch.
 This helps you discover and resolve any conflicts before your changes are merged into the main codebase, making the final pull request easier to review and less likely to cause problems for others.
 The simplest way to do this is by merging `main` into your branch.
+
+<details>
+  <summary>CLI</summary>
+    From the CLI, this looks like:
+
+    ```bash
+    git fetch
+    git merge origin/main
+    ```
+
+    If Git reports a conflict, it marks the affected lines directly in the file with `<<<<<<<`, `=======`, and `>>>>>>>` markers.
+    Edit the file to keep the changes you want, remove the markers, then run `git add <file-path>` and `git commit` to complete the merge.
+    Use `git status` at any point to see which files are still conflicted, or `git merge --abort` to back out and start over.
+</details>
 
 Another common approach is **rebasing**, which moves your commits so they appear as if they were created on top of the latest version of `main`.
 Rebasing results in a cleaner, more linear project history, but because it rewrites commit history, it should be used with care, especially on branches that are shared with others.
