@@ -1,5 +1,5 @@
 ---
-title: How to work on different topics in parallel?
+title: How to work on different topics in parallel
 slug: guides/parallel-topics
 sidebar:
   order: 4
@@ -58,7 +58,8 @@ Here we will explain the way to do it from the repo's main page:
     ```
 
     This creates `feature-xyz` from your current branch and switches to it in one step.
-    You may also see `git checkout -b feature-xyz`, the older equivalent - see :term[checkout] for the difference.
+    You may also use `git checkout -b feature-xyz`, the older equivalent.
+    See :term[checkout] for the difference.
   </TabItem>
 </Tabs>
 
@@ -99,7 +100,8 @@ However, as you make changes in the new branch, it will diverge from the parent 
     git switch feature-xyz
     ```
 
-    You may also see `git checkout feature-xyz`, the older equivalent - see :term[checkout] for the difference.
+    You may also use `git checkout feature-xyz`, the older equivalent.
+    See :term[checkout] for the difference.
   </TabItem>
 </Tabs>
 
@@ -156,16 +158,6 @@ This ensures that your changes are integrated into the main codebase, so they ca
       6. Once you are done, confirm by creating the merge request.
     </Steps>
   </TabItem>
-  <TabItem label="Local / CLI">
-    Opening a pull/merge request on the web is still the recommended way to merge, since it gives your team a chance to review the changes first.
-    For completeness, here is the raw local merge:
-
-    ```bash
-    git switch main
-    git merge feature-xyz
-    git push
-    ```
-  </TabItem>
 </Tabs>
 
 After that, your pull request will be created and you can see it in the `Pull requests` tab.
@@ -173,6 +165,17 @@ You can continue to work on your branch, and after every commit, the pull reques
 Once the work is done, you can merge the pull request by clicking on the green button that says `Merge pull request`, `Squash and merge`, or `Rebase and merge`.
 Usually, you use Merge or Squash - more details on this topic can be found [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/about-pull-request-merges).
 This will merge your changes into the `main` branch and close the pull request.
+
+<Aside type="note">
+  Opening a pull/merge request on the web is still the recommended way to merge, since it gives your team a chance to review the changes first.
+  For completeness, here is the raw local merge with the use of CLI commands:
+
+  ```bash
+  git switch main
+  git merge feature-xyz
+  git push
+  ```
+</Aside>
 
 ### Resolve conflicts
 

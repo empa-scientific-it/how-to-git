@@ -1,5 +1,5 @@
 ---
-title: How to work with Git locally?
+title: How to work with Git locally
 slug: guides/cli-setup
 sidebar:
   order: 8
@@ -9,14 +9,14 @@ import { Aside } from "@astrojs/starlight/components";
 import { Steps } from "@astrojs/starlight/components";
 import { Tabs, TabItem } from "@astrojs/starlight/components";
 
-So far, this tutorial covered working directly in the browser.
-You can also work with Git from your local machine, using either the command line or a graphical Git tool.
-This guide covers the command line, since it is the most common way to interact with Git and works the same everywhere.
+So far, we have covered working directly in the browser.
+It is also possible to work with Git directly from your local machine, using either the command line or a graphical Git tool.
+The command line is the most common way to interact with Git and works the same everywhere.
 
 <Aside type="tip">
   If you are not comfortable with the command line, graphical Git tools cover the same local workflow.
   [Git GUI](https://git-scm.com/docs/git-gui) is bundled with Git itself, and the [VS Code Git and GitHub extensions](https://code.visualstudio.com/docs/sourcecontrol/overview) are a popular alternative if you already use VS Code.
-  This guide does not cover them step by step, but everything described here has an equivalent button or menu entry in those tools.
+  This guide does not cover those tools, but everything described here has an equivalent button or menu entry in those.
 </Aside>
 
 ### Install and configure Git
@@ -56,7 +56,7 @@ This is also how you start working locally after [forking](../collaborate/#forki
 ### Start your own new project
 
 If you're starting your own work instead of downloading someone else's, first [create the repository](../repository) on the web as usual - there is no local-only equivalent for that step.
-Then either clone the empty repository as above, or, if you already have a local folder you want to turn into a repository, initialize it and connect it to the remote you just created:
+Then either clone the empty repository as above, or, if you already have a local folder that you want to turn into a repository, initialize it and connect it to the remote you just created:
 
 ```bash
 git init
@@ -69,7 +69,10 @@ The steps above work as-is for a **public GitHub repository**, since reading it 
 You'll only run into a permission wall once you try to `push`, or `clone`/`pull` something private - at that point Git will ask you to authenticate.
 Empa's GitLab is internal-only, so there it applies from the very first `clone`.
 
-There are two common ways to authenticate. **SSH keys** are recommended: a key pair lives on your machine, and you register the public half with GitHub/GitLab once.
+There are two common ways to authenticate:
+
+**SSH keys** are the recommended way.
+It's a key pair that lives on your machine, of which you register the public half with GitHub/GitLab once.
 
 ```bash
 ssh-keygen -t ed25519 -C "your.email@example.com"
@@ -138,5 +141,7 @@ See [GitHub's PAT docs](https://docs.github.com/en/authentication/keeping-your-a
 
 <Aside type="tip">
   Platform actions like issues, pull/merge requests, and reviews can also be done from the terminal, using tools like [`gh`](https://cli.github.com/) (GitHub) or [`glab`](https://gitlab.com/gitlab-org/cli) (GitLab).
-  These are more advanced and not recommended to get started - the rest of this tutorial covers those actions through the web UI instead. Only if you want to fully automate some workflow should you revisit those tools.
+  These are more advanced and not recommended for beginners.
+  The rest of this tutorial covers those actions through the web UI instead.
+  Only if you want to fully automate some workflow should you revisit those tools.
 </Aside>

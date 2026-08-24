@@ -1,5 +1,5 @@
 ---
-title: How to track changes to my file?
+title: How to track changes to a file
 slug: guides/track-changes
 sidebar:
   order: 2
@@ -14,8 +14,11 @@ File changes can be made either directly in the web browser or locally on your c
 Working locally is useful if you prefer working in your familiar development environment, especially when writing and running code.
 In this tutorial, we will start with editing a text file using the web browser, so you won't need to write any code - you can simply use the appropriate buttons.
 
-<Aside type="tip">
-  Working locally follows the same idea, with commands instead of buttons: edit a file, check what changed with `git status` and `git diff`, then stage and commit it with `git add <file-path>` and `git commit -m "..."` - see [Add a file to the repository](../repository/#add-a-file-to-the-repository) for the full loop, including `git push`.
+<Aside type="note">
+  Working locally follows the same idea but with the use of CLI commands instead of buttons.
+  After editing a file, check what changed with `git status` and `git diff`, then stage and commit it with `git add <file-path>` and `git commit -m <commit-message>`.
+
+  See [Add a file to the repository](../repository/#add-a-file-to-the-repository) for the full loop, including `git push`.
 </Aside>
 
 ### Change files
@@ -96,7 +99,7 @@ In Git, you can view all kinds of changes - whether for a single file, the entir
     git log --oneline --graph --all
     ```
 
-    To see the exact changes made in a specific commit copy the corresponding sha (e.g. from the command above):
+    To see the exact changes made in a specific commit, copy the corresponding SHA (e.g. from the command above):
 
     ```bash
     git show <sha>
