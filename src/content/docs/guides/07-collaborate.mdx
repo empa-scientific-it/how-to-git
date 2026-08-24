@@ -1,5 +1,5 @@
 ---
-title: How to collaborate with others?
+title: How to collaborate with others
 slug: guides/collaborate
 sidebar:
   order: 7
@@ -102,6 +102,15 @@ Once your changes are ready, you can propose them back to the original repositor
     </Steps>
   </TabItem>
 </Tabs>
+
+Once you have a fork, clone it as described in [Work with Git locally](../cli-setup) to work on it from your machine.
+It's also common to add the original repository as a second remote, usually called `upstream`, so you can pull in its future changes:
+
+```bash
+git remote add upstream <original-url>
+git fetch upstream
+git merge upstream/main
+```
 
 ### Report problems and give suggestions
 

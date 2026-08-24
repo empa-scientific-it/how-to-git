@@ -1,5 +1,5 @@
 ---
-title: How to track changes to my file?
+title: How to track changes to a file
 slug: guides/track-changes
 sidebar:
   order: 2
@@ -13,6 +13,13 @@ This allows you to always see what was modified at any point in time and, if nec
 File changes can be made either directly in the web browser or locally on your computer.
 Working locally is useful if you prefer working in your familiar development environment, especially when writing and running code.
 In this tutorial, we will start with editing a text file using the web browser, so you won't need to write any code - you can simply use the appropriate buttons.
+
+<Aside type="note">
+  Working locally follows the same idea but with the use of CLI commands instead of buttons.
+  After editing a file, check what changed with `git status` and `git diff`, then stage and commit it with `git add <file-path>` and `git commit -m <commit-message>`.
+
+  See [Add a file to the repository](../repository/#add-a-file-to-the-repository) for the full loop, including `git push`.
+</Aside>
 
 ### Change files
 To modify a file in the web browser, start by opening the :term[repository] and clicking on the file you have added.
@@ -74,5 +81,28 @@ In Git, you can view all kinds of changes - whether for a single file, the entir
     You can view the history of commits for another branch by selecting one from the branch dropdown button at the top-left corner of the page.
 
     3. There is the possibility to see a **more detailed view of the repository's history** by clicking `Repository graph` under `Code` at the left-hand side menu.
+  </TabItem>
+  <TabItem label="Local / CLI">
+    To check the **history of a file**:
+
+    ```bash
+    git log <file-path>
+    ```
+
+    Each entry shows the commit message, author, and SHA - the unique identifier for that commit.
+
+    ![git log output with the commit SHA highlighted](src/assets/cli/commit-sha.png)
+
+    To check the **history of the current branch**, including a graphical view of how branches diverged and merged:
+
+    ```bash
+    git log --oneline --graph --all
+    ```
+
+    To see the exact changes made in a specific commit, copy the corresponding SHA (e.g. from the command above):
+
+    ```bash
+    git show <sha>
+    ```
   </TabItem>
 </Tabs>

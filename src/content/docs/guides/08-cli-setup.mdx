@@ -1,0 +1,147 @@
+---
+title: How to work with Git locally
+slug: guides/cli-setup
+sidebar:
+  order: 8
+---
+
+import { Aside } from "@astrojs/starlight/components";
+import { Steps } from "@astrojs/starlight/components";
+import { Tabs, TabItem } from "@astrojs/starlight/components";
+
+So far, we have covered working directly in the browser.
+It is also possible to work with Git directly from your local machine, using either the command line or a graphical Git tool.
+The command line is the most common way to interact with Git and works the same everywhere.
+
+<Aside type="tip">
+  If you are not comfortable with the command line, graphical Git tools cover the same local workflow.
+  [Git GUI](https://git-scm.com/docs/git-gui) is bundled with Git itself, and the [VS Code Git and GitHub extensions](https://code.visualstudio.com/docs/sourcecontrol/overview) are a popular alternative if you already use VS Code.
+  This guide does not cover those tools, but everything described here has an equivalent button or menu entry in those.
+</Aside>
+
+### Install and configure Git
+
+First, [install Git](https://git-scm.com/downloads) for your operating system.
+
+Then, tell Git who you are - this information is attached to every :term[commit] you make:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+
+### Download an existing repository
+
+To get a local copy of an existing repository, use `git clone` with its URL:
+
+```bash
+git clone <url>
+```
+
+You can find that URL on the repository's main page:
+
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    Click the green `Code` button and copy the URL shown there.
+    ![Code button with clone URL](src/assets/github/clone-code-button.png)
+  </TabItem>
+  <TabItem label="GitLab">
+    Click the blue `Code` button and copy the URL shown there.
+    ![Code button with clone URL](src/assets/gitlab/clone-code-button.png)
+  </TabItem>
+</Tabs>
+
+This is also how you start working locally after [forking](../collaborate/#forking-a-repository) someone else's repository: clone your fork the same way.
+
+### Start your own new project
+
+If you're starting your own work instead of downloading someone else's, first [create the repository](../repository) on the web as usual - there is no local-only equivalent for that step.
+Then either clone the empty repository as above, or, if you already have a local folder that you want to turn into a repository, initialize it and connect it to the remote you just created:
+
+```bash
+git init
+git remote add origin <url>
+```
+
+### Authenticate
+
+The steps above work as-is for a **public GitHub repository**, since reading it requires no authentication at all.
+You'll only run into a permission wall once you try to `push`, or `clone`/`pull` something private - at that point Git will ask you to authenticate.
+Empa's GitLab is internal-only, so there it applies from the very first `clone`.
+
+There are two common ways to authenticate:
+
+**SSH keys** are the recommended way.
+It's a key pair that lives on your machine, of which you register the public half with GitHub/GitLab once.
+
+```bash
+ssh-keygen -t ed25519 -C "your.email@example.com"
+```
+
+This creates a private and a public key.
+Add the private key to your SSH agent so you don't need to type its passphrase every time.
+`ssh-add` needs the agent to be running first, and how you start it differs by platform:
+
+<Tabs syncKey="os">
+  <TabItem label="macOS / Linux">
+    ```bash
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+    ```
+  </TabItem>
+  <TabItem label="Windows">
+    Using Windows' built-in OpenSSH client, in a PowerShell window opened **as Administrator** (required to change the service's startup type - you only need to do this once):
+
+    ```powershell
+    Set-Service ssh-agent -StartupType Automatic
+    Start-Service ssh-agent
+    ```
+
+    From then on the agent starts automatically, so in any regular (non-admin) PowerShell window you can just run:
+
+    ```powershell
+    ssh-add $HOME\.ssh\id_ed25519
+    ```
+  </TabItem>
+</Tabs>
+
+Then copy the contents of the public key file and paste it into your account settings:
+
+<Tabs syncKey="os">
+  <TabItem label="macOS / Linux">
+    ```bash
+    pbcopy < ~/.ssh/id_ed25519.pub
+    ```
+
+    (on Linux without `pbcopy`, use `xclip -selection clipboard < ~/.ssh/id_ed25519.pub`, or just print it and copy it manually: `cat ~/.ssh/id_ed25519.pub`)
+  </TabItem>
+  <TabItem label="Windows">
+    ```powershell
+    Get-Content $HOME\.ssh\id_ed25519.pub | Set-Clipboard
+    ```
+  </TabItem>
+</Tabs>
+
+<Tabs syncKey="option">
+  <TabItem label="GitHub">
+    Under `Settings` > `SSH and GPG keys` > `New SSH key`. See [GitHub's guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) for more detail.
+    ![SSH keys settings page](src/assets/github/ssh-key-settings.png)
+  </TabItem>
+  <TabItem label="GitLab">
+    Under `Edit profile` > `SSH Keys`. See [GitLab's guide](https://docs.gitlab.com/user/ssh/) for more detail.
+    ![SSH keys settings page](src/assets/gitlab/ssh-key-settings.png)
+  </TabItem>
+</Tabs>
+
+From then on, use the `git@...` (SSH) form of the repository URL when cloning.
+
+Alternatively, **HTTPS with a Personal Access Token (PAT)** is a lighter-weight option if you'd rather not manage SSH keys, or if your network blocks SSH.
+You generate a token once on GitHub/GitLab and use it in place of a password when Git asks for one.
+See [GitHub's PAT docs](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) or [GitLab's PAT docs](https://docs.gitlab.com/user/profile/personal_access_tokens/) for how to create one.
+
+<Aside type="tip">
+  Platform actions like issues, pull/merge requests, and reviews can also be done from the terminal, using tools like [`gh`](https://cli.github.com/) (GitHub) or [`glab`](https://gitlab.com/gitlab-org/cli) (GitLab).
+  These are more advanced and not recommended for beginners.
+  The rest of this tutorial covers those actions through the web UI instead.
+  Only if you want to fully automate some workflow should you revisit those tools.
+</Aside>

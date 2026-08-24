@@ -1,5 +1,5 @@
 ---
-title: How to share my text with people?
+title: How to share work with people
 slug: guides/repository
 sidebar:
   order: 1
@@ -105,33 +105,45 @@ You can do that from the repository's main page:
   <TabItem label="GitHub">
     Click on the `Add file` dropdown button.
     ![Add file menu](src/assets/github/add-file.png)
+
+    If you choose to upload an existing file then in the newly opened page you can drag and drop any file you wish.
+
+    Instead, if you choose to create a new file, this will lead you to a new window:
+    ![Add file menu](src/assets/github/create-file.png)
+
+    Give your file a name and do not forget to add the file extention as well.
+    Once you are done writing the content, click on the `Commit changes` button.
   </TabItem>
   <TabItem label="GitLab">
     Click on the :heavy_plus_sign: dropdown button.
     ![Add file menu](src/assets/gitlab/new-branch.png)
-  </TabItem>
-</Tabs>
 
-If you choose to upload an existing file then in the newly opened page you can drag and drop any file you wish.
+    If you choose to upload an existing file then in the newly opened page you can drag and drop any file you wish.
 
-Instead, if you choose to create a new file, this will lead you to a new window:
-
-<Tabs syncKey="option">
-  <TabItem label="GitHub">
-    ![Add file menu](src/assets/github/create-file.png)
-  </TabItem>
-  <TabItem label="GitLab">
+    Instead, if you choose to create a new file, this will lead you to a new window:
     ![Add file menu](src/assets/gitlab/create-file.png)
+
+    Give your file a name and do not forget to add the file extention as well.
+    Once you are done writing the content, click on the `Commit changes` button.
+  </TabItem>
+  <TabItem label="Local / CLI">
+    If you have a [local copy of the repository](../cli-setup), create or edit the file with **any** editor, then use the CLI to add, commit and push it:
+
+    ```bash
+    git add <file-path>
+    git commit -m "Add <file-path>"
+    git push
+    ```
   </TabItem>
 </Tabs>
-
-Give your file a name and do not forget to add the file extention as well.
-Once you are done writing the content, click on the `Commit changes` button.
 
 <Aside type="note">
   You need to ensure that you are creating the file in the correct folder and the correct branch.
   We will discuss branches in more detail [later on](../parallel-topics).
-  Since this may seem complicated for now, it is recommended to start by uploading existing files.
+  Since this may seem complicated for now, it is recommended to start by uploading existing files via the web interface.
+</Aside>
+
+<Aside type="note">
   For now, applying all changes to the branch called `main` is sufficient.
   Soon, we will explore more advanced practices.
 </Aside>
