@@ -14,10 +14,16 @@ Before making any changes, take a few minutes to familiarize yourself with the :
 1. **Open the repository.**
    Do not forget to log in to your GitHub account, if prompted.
 
-2. **Read the README.**
+2. **Read the documentation.**
    Most repositories start with a `README.md` file displayed on the main page.
    There the main purpose and structure of the project is explained.
-   Read it carefully.
+   This file might be too technical and not needed for those who do not plan on developing locally, however it contains other useful information as well.
+
+   <Aside type="note">
+   For our tutorial we are using the [Gitcook](https://github.com/empa-scientific-it/gitcook) repository.
+   It contains two improtant documentation files: [CONTRIBUTING.md](https://github.com/empa-scientific-it/gitcook/blob/main/CONTRIBUTING.md) and [RECIPE_TEMPLATE.md](https://github.com/empa-scientific-it/gitcook/blob/main/RECIPE_TEMPLATE.md), which provide guidelines for completing the following exercises.
+   You can also find these links in the [README file](https://github.com/empa-scientific-it/gitcook/blob/main/README.md).
+   </Aside>
 
 3. **Browse the files.**
    Click on folders and files to explore what is already there.
@@ -30,15 +36,9 @@ Before making any changes, take a few minutes to familiarize yourself with the :
    At this point you will probably only see the `main` branch in this list.
 
 5. **Check the commit history.**
-   Under the green `<> Code` button you will see a :clock4: `Commits` link with a count.
+   Underneath the green `<> Code` button you will see a :clock4: `Commits` link with a count.
    Click it to see all commits.
    Notice the author name, the :term[commit] message, and the timestamp.
-
-6. **View the network graph.**
-   Go to the `Insights` tab at the top of the repository, then click `Network` in the left sidebar.
-   This shows a visual timeline of all branches and commits.
-   At this point you will probably only see the `main` branch as a straight line.
-   Keep this view in mind as you will come back to it later to see how your branch fits in.
 
 </Steps>
 
@@ -56,9 +56,9 @@ In a real project, work is always planned and tracked before any code or text is
 GitHub **Issues** are the place to do that.
 You will now create an :term[issue] to describe the contribution you are going to make in this tutorial.
 
-<Aside type="note" title="What will you contribute?">
-The instructors will tell you what file to create and where.
+<Aside type="tip" title="What will you contribute?">
 In this tutorial we are only going to work with text files.
+The instructors will tell you what file to create and where.
 </Aside>
 
 <Steps>
@@ -68,6 +68,12 @@ In this tutorial we are only going to work with text files.
 
 2. **Create a new issue.**
    Click the green `New issue` button in the top-right corner.
+
+   <Aside type="note" title="About Issue Templates">
+   The [Gitcook](https://github.com/empa-scientific-it/gitcook) repository is using something called *issue templates*.
+   These are *optional* pre-defined structures that help you create consistent and informative issues.
+   For this exercise, please select **Recipe Request**.
+   </Aside>
 
 3. **Write a clear title.**
    The title should describe *what* you plan to do.
@@ -80,15 +86,17 @@ In this tutorial we are only going to work with text files.
    On the right-hand side, click `Assignees` and select your own GitHub username.
    Adding an :term[assignee] signals to the team that there is a person responsible for this task.
 
-6. **Add a label.**
-   Click `Labels` and select a relevant :term[label].
-   This helps with filtering and prioritizing issues.
-
-7. **Submit the issue.**
+6. **Submit the issue.**
    Click the green `Create` button.
    You will be taken to the issue page.
    Note the issue number (e.g., `#7`) shown next to the title - you will need it later.
 
+7. **Label.**
+   There is a `Labels` section available on the right-hand side.
+   You will notice that a relevant :term[label] was automatically added to your issue.
+   That is because of the issue template you selected.
+   This helps with filtering and prioritizing issues.
+   You are always free to add or edit issue labels, regardless of whether you have started from an issue template or not.
 </Steps>
 
 <Aside type="tip">
@@ -142,13 +150,18 @@ Now that you are on your own branch, you can safely make changes without affecti
 
 <Steps>
 
-1. **Navigate to the folder where you want to add a text file.**
+1. **Navigate to the folder where you want to add a file.**
 
 2. **Create a new file.**
    Click the `Add file` button at the top-right area of the file list and select `Create new file`.
 
 3. **Name your file.**
-   In the filename field at the top, type the path to your file, followed by the file's name.
+   In the filename field at the top, type the path to your file, followed by the file's name and extension.
+
+   <Aside type="note" title="File Extension">
+   **Do not forget** to add the file extension together with the name.
+   In our case it should be **.mdx**.
+   </Aside>
 
 4. **Write your content.**
    In the editor, add a few lines.
@@ -180,7 +193,7 @@ Remember, clicking on a commit takes you to the state of the repository where al
 
 ## 5. Open a Pull Request
 
-A Pull Request, also known as PR, is a formal request to merge your branch into `main`.
+A Pull Request, also known as PR, is a formal request to merge your branch into another branch, most commonly the `main` branch.
 It is also the space where collaborators review your changes and give feedback.
 
 <Steps>
@@ -193,12 +206,19 @@ It is also the space where collaborators review your changes and give feedback.
    - `Base branch`: `main` (this is where your changes will be merged into)
    - `Compare branch`: your branch (e.g., `7-your-branch`)
 
-   After selecting, GitHub will show you a diff — the exact changes you are proposing.
+   After selecting, GitHub will show you a diff: the exact changes you are proposing.
 
 3. **Start the pull request creation.**
    Click the green `Create pull request` button.
 
+   <Aside type="note" title="About PR Templates">
+   You will notice that a template is also applied here.
+   Apart from issue templates, there are also pull request templates.
+   These are *optional* pre-defined structures that help you create consistent and informative PRs.
+   </Aside>
+
 4. **Write a title and description.**
+   Do not alter the title and description format coming from the template, just add your specific details.
    - The PR title should be concise and descriptive.
    - In the description, explain what your PR does and why.
    Then link it to your issue by adding a line like:
@@ -274,7 +294,18 @@ Reviewing is an essential skill - it helps catch problems early and improves the
      - **Request changes** - something must be fixed before this can be merged.
    - Click the green `Submit review` button.
 
+7. **Iterate.**
+   If your review requests changes, then the PR author will make the necessary modifications and re-request your review.
+
+   Similarly, if a PR you have opened has been reviewed, you might need to go back to your branch to address the requested changes and then commit them.
+   While addressing comments one by one, you will see them being marked as *outdated*.
+   Continue working until all of them have been addressed and then re-request a review.
+   You will only be able to merge your PR once the reviewer has approved it.
 </Steps>
+
+<Aside type="note">
+Reviewing and editing PRs is an iterative process and might take a few tries until you get it right, but this shows you exactly that it is a collaborative process as well.
+</Aside>
 
 ---
 
@@ -289,7 +320,7 @@ The merge button will only be activated once one of the instructors has approved
 
 <Steps>
 
-1. **Open your pull request.**
+1. **Go to your pull request.**
    Go to the `Pull requests` tab and click on your PR.
 
 2. **Check the review status.**
@@ -305,17 +336,21 @@ The merge button will only be activated once one of the instructors has approved
    When the PR is approved, click the green `Merge pull request` button.
    Confirm by clicking `Confirm merge`.
 
+   <Aside type="note" title="Sync with main">
+   If other branches have been merged to `main` first, merging yours might not be immediately possible.
+   In that case, you will be asked to update your branch by pulling the latest changes from `main`.
+   If everything goes smoothly, your branch is now up-to-date with `main` and you can proceed with merging it.
+   But sometimes conflicts may arise; we will soon see how to solve them.
+   </Aside>
+
 5. **Delete the branch.**
    After merging, GitHub shows a button to `Delete branch`.
-   Click it, then the branch has served its purpose and can be deleted.
+   Click it; the branch has served its purpose and can be deleted.
+   This might happen automatically, depending on the repository settings.
 
 6. **Check that your issue is closed.**
    Go to the `Issues` tab.
    Because you wrote `Closes #7` in the PR description, the issue should now be automatically closed.
-
-7. **View the network graph.**
-   Go to the `Insights > Network` tab again.
-   You will now see your branch joining the `main` line - a visual record of your contribution.
 
 </Steps>
 
