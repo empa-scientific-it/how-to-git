@@ -368,16 +368,16 @@ A **merge conflict** occurs when two branches have changed the same part of the 
 Git cannot decide which version to keep automatically so it needs a human to choose.
 
 <Aside type="note" title="Setup">
-We will now introduce a conflict scenario by adding a `CONTRIBUTORS.md` file.
-Participants will have edited the **same lines** in the same file on **different branches**.
+We will now introduce a conflict scenario.
+Participants will have edited the same file on **different branches**.
 When one branch is merged first, the second branch will have a conflict that must be resolved before it can also be merged.
 </Aside>
 
 ### How a conflict happens
 
-Imagine two people both edit `README.md` on their respective branches:
-- **Branch A** changes the project title to `"Empa Git Workshop"`.
-- **Branch B** changes the same line to `"Empa GitHub Tutorial"`.
+Imagine two people both edit a file on their respective branches:
+- **Branch A** changes line 1 to `"Empa Git Workshop"`.
+- **Branch B** changes line 1 to `"Empa GitHub Tutorial"`.
 
 When Branch A is merged first, Branch B now conflicts with `main`.
 
